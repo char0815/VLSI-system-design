@@ -1,0 +1,2542 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.10-p004_1, built Thu May 7 20:02:41 PDT 2020
+Options:	
+Date:		Thu Dec 22 23:48:22 2022
+Host:		vlsicad9 (x86_64 w/Linux 3.10.0-957.21.3.el7.x86_64) (4cores*16cpus*Intel(R) Xeon(R) CPU E5520 @ 2.27GHz 8192KB)
+OS:		CentOS Linux release 7.6.1810 (Core) 
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (47 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> set init_design_uniquify 1
+<CMD> set init_no_new_assigns 1
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set defHierChar /
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set eco_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set init_design_uniquify 1
+<CMD> set init_gnd_net GND
+<CMD> set init_lef_file {/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef  ../sim/SRAM/SRAM.lef ../sim/data_array/data_array.lef ../sim/tag_array/tag_array.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef}
+<CMD> set init_mmmc_file ../script/MMMC.view
+<CMD> set init_pwr_net VCC
+<CMD> set init_remove_assigns 1
+<CMD> set init_top_cell top
+<CMD> set init_verilog ../syn/top_syn.v
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set soft_stack_size_limit 192
+<CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> init_design
+#% Begin Load MMMC data ... (date=12/22 23:50:11, mem=523.2M)
+#% End Load MMMC data ... (date=12/22 23:50:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=523.3M, current mem=523.3M)
+RC
+
+Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef ...
+WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+Without DIVIDECHAR defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef at line 1290.
+
+Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 1.
+Set DBUPerIGU to M2 pitch 620.
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 40071.
+
+Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 1.
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 2034.
+
+Loading LEF file ../sim/SRAM/SRAM.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/SRAM/SRAM.lef at line 37.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9157.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9171.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9185.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9199.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9213.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9227.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9241.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9255.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9269.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9283.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9297.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9311.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9325.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9339.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9353.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9367.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9381.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9395.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9409.
+**ERROR: (IMPLF-40):	Macro 'SRAM' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+
+Loading LEF file ../sim/data_array/data_array.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/data_array/data_array.lef at line 37.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4117.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4131.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4145.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4159.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4173.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4187.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4201.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4215.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4229.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4243.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4257.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4271.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4285.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4299.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4313.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4327.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4341.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4355.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4369.
+**ERROR: (IMPLF-40):	Macro 'data_array' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+
+Loading LEF file ../sim/tag_array/tag_array.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/tag_array/tag_array.lef at line 37.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1327.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1341.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1355.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1369.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1383.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1397.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1411.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1425.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1439.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1453.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1467.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1481.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1495.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1509.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1523.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1537.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1551.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1565.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1579.
+**ERROR: (IMPLF-40):	Macro 'tag_array' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+
+Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef ...
+**WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+Without BUSBITCHARS defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+Without DIVIDECHAR defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+**WARN: (IMPLF-61):	382 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-61' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+viaInitial starts at Thu Dec 22 23:50:11 2022
+viaInitial ends at Thu Dec 22 23:50:11 2022
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from ../script/MMMC.view
+Reading lib_max timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib)
+Read 382 cells in library 'fsa0m_a_generic_core_ss1p62v125c' 
+Reading lib_max timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ss1p62v125c.lib' ...
+Read 6 cells in library 'fsa0m_a_t33_generic_io_ss1p62v125c' 
+Reading lib_max timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/SRAM/SRAM_WC.lib' ...
+Read 1 cells in library 'SRAM_WC' 
+Reading lib_max timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/data_array/data_array_WC.lib' ...
+Read 1 cells in library 'data_array_WC' 
+Reading lib_max timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/tag_array/tag_array_WC.lib' ...
+Read 1 cells in library 'tag_array_WC' 
+Reading lib_min timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib)
+Read 382 cells in library 'fsa0m_a_generic_core_ff1p98vm40c' 
+Reading lib_min timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ff1p98vm40c.lib' ...
+Read 6 cells in library 'fsa0m_a_t33_generic_io_ff1p98vm40c' 
+Reading lib_min timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/SRAM/SRAM_BC.lib' ...
+Read 1 cells in library 'SRAM_BC' 
+Reading lib_min timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/data_array/data_array_BC.lib' ...
+Read 1 cells in library 'data_array_BC' 
+Reading lib_min timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/tag_array/tag_array_BC.lib' ...
+Read 1 cells in library 'tag_array_BC' 
+*** End library_loading (cpu=0.08min, real=0.07min, mem=19.5M, fe_cpu=0.75min, fe_real=1.88min, fe_mem=820.3M) ***
+#% Begin Load netlist data ... (date=12/22 23:50:15, mem=548.5M)
+*** Begin netlist parsing (mem=820.3M) ***
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4T' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4T' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4S' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4S' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4P' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4P' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3T' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3T' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3S' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3S' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3P' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3P' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Created 391 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../syn/top_syn.v'
+
+*** Memory Usage v#1 (Current mem = 828.273M, initial mem = 268.250M) ***
+*** End netlist parsing (cpu=0:00:00.4, real=0:00:01.0, mem=828.3M) ***
+#% End Load netlist data ... (date=12/22 23:50:16, total cpu=0:00:00.4, real=0:00:01.0, peak res=569.7M, current mem=569.7M)
+Set top cell to top.
+Hooked 782 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell top ...
+*** Netlist is unique.
+** info: there are 876 modules.
+** info: there are 23739 stdCell insts.
+** info: there are 6 macros.
+
+*** Memory Usage v#1 (Current mem = 887.199M, initial mem = 268.250M) ***
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Reading Capacitance Table File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl ...
+Cap table was created using Encounter 13.13-s017_1.
+Process name: MIXED_MODE_RFCMOS18_1P6M_MMC_TOP_METAL20_6K.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: AV_max
+    RC-Corner Name        : RC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: AV_typ
+    RC-Corner Name        : RC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: AV_min
+    RC-Corner Name        : RC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading lib_typ timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_tt1p8v25c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_tt1p8v25c.lib)
+Read 382 cells in library 'fsa0m_a_generic_core_tt1p8v25c' 
+Reading lib_typ timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_tt1p8v25c.lib' ...
+Read 6 cells in library 'fsa0m_a_t33_generic_io_tt1p8v25c' 
+Reading lib_typ timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/SRAM/SRAM_TC.lib' ...
+Read 1 cells in library 'SRAM_TC' 
+Reading lib_typ timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/data_array/data_array_TC.lib' ...
+Read 1 cells in library 'data_array_TC' 
+Reading lib_typ timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/tag_array/tag_array_TC.lib' ...
+Read 1 cells in library 'tag_array_TC' 
+Reading timing constraints file '../script/APR.sdc' ...
+Current (total cpu=0:00:49.2, real=0:01:57, peak res=819.3M, current mem=819.3M)
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../script/APR.sdc, Line 18).
+
+INFO (CTE): Reading of timing constraints file ../script/APR.sdc completed, with 1 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:01.0, peak res=837.7M, current mem=837.7M)
+Current (total cpu=0:00:49.3, real=0:01:58, peak res=837.7M, current mem=837.7M)
+Total number of combinational cells: 290
+Total number of sequential cells: 79
+Total number of tristate cells: 13
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF1 BUF12CK BUF1S BUF1CK BUF2CK BUF2 BUF3 BUF4 BUF3CK BUF4CK BUF6CK BUF6 BUF8 BUF8CK
+Total number of usable buffers: 14
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV1 INV12 INV12CK INV1CK INV1S INV2 INV3 INV2CK INV4 INV3CK INV4CK INV6 INV6CK INV8 INV8CK
+Total number of usable inverters: 15
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DELA DELC DELB
+Total number of identified usable delay cells: 3
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPLF-40             3  Macro '%s' references a site '%s' that h...
+WARNING   IMPLF-58           382  MACRO '%s' has been found in the databas...
+WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-119            6  LAYER '%s' has been found in the databas...
+WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+WARNING   IMPVL-159          770  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   IMPCTE-290           8  Could not locate cell %s in any library ...
+WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+WARNING   TECHLIB-302          3  No function defined for cell '%s'. The c...
+*** Message Summary: 1180 warning(s), 3 error(s)
+
+<CMD> saveIoFile -byOrder -temp ../pr/top.io
+** Writing IO pins constraint template file, all existing constraints are ignored.
+Dumping FTerm of cell top to file
+<CMD> loadIoFile ../pr/top.io
+Reading IO assignment file "../pr/top.io" ...
+<CMD> zoomBox -928.85600 -608.60700 3537.34400 3389.59500
+<CMD> zoomBox -353.39200 -154.47600 3442.87800 3243.99600
+ambiguous command name "remove": remove_assigns remove_from_collection remove_gui_marker remove_nulls
+<CMD> remove_assigns
+<CMD> setDesignMode -process 180
+##  Process: 180           (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+<CMD> clearGlobalNets
+<CMD> globalNetConnect VCC -type pgpin -pin VCC -instanceBasename *
+<CMD> globalNetConnect GND -type pgpin -pin GND -instanceBasename *
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_5040 -r 1 0.7 35 35 35 35
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> ::mp::clearAllSeed
+<CMD> setPlanDesignMode -effort high -incremental false -boundaryPlace true -fixPlacedMacros false -noColorize false
+<CMD> planDesign
+**WARN: (IMPAFP-9024):	planDesign is obsolete. This command will be removed from the next release.
+Deleted 0 physical inst  (cell - / prefix -).
+***** New seed flow = 1. *****  
+Auto Seed: CPU_wrapper
+Auto Seed: IM1
+Auto Seed: DM1
+Auto Macro Seed: DM1
+Auto Macro Seed: IM1
+Ignore PD Guides: numIgnoredGuide = 0 
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Starting "NanoPlace(TM) placement v#2 (mem=1161.3M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:16.4 mem=1250.8M) ***
+**WARN: (IMPTS-141):	Cell (PDIX) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PDI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PUI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (BHD1) is marked as dont_touch, but is not marked as dont_use.
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:17.3 mem=1265.8M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 13527 (57.3%) nets
+3		: 5325 (22.6%) nets
+4     -	14	: 4550 (19.3%) nets
+15    -	39	: 168 (0.7%) nets
+40    -	79	: 15 (0.1%) nets
+80    -	159	: 5 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 1 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: timingDriven clkGateAware pinGuide congEffort=auto gpeffort=medium 
+#std cell=23739 (0 fixed + 23739 movable) #buf cell=3786 #inv cell=2380 #block=6 (6 floating + 0 preplaced)
+#ioInst=0 #net=23591 #term=86013 #term/net=3.65, #fixedIo=167, #floatIo=0, #fixedPin=0, #floatPin=167
+stdCell: 23739 single + 0 double + 0 multi
+Total standard cell length = 116.7782 (mm), area = 0.5886 (mm^2)
+Estimated cell power/ground rail width = 0.630 um
+Average module density = 0.696.
+Density for the design = 0.696.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3056418 sites (9550695 um^2).
+Pin Density = 0.02814.
+            = total # of pins 86013 / total area 3056418.
+Fence Initialization: numPrefixFence = 0,  numAutoFence = 0, numPrefixGuide = 0  numAutoGuide = 0 numNoCon = 0 
+Identified 5 spare or floating instances, with no clusters.
+=== lastAutoLevel = 10 
+Iteration  1: Total net bbox = 2.261e+06 (6.78e+05 1.58e+06)
+              Est.  stn bbox = 2.358e+06 (7.06e+05 1.65e+06)
+              cpu = 0:00:01.5 real = 0:00:01.0 mem = 1437.9M
+User specified -module_cluster_mode =  0 
+Iteration  2: Total net bbox = 2.261e+06 (6.78e+05 1.58e+06)
+              Est.  stn bbox = 2.358e+06 (7.06e+05 1.65e+06)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1438.9M
+Iteration  3: Total net bbox = 1.990e+06 (7.55e+05 1.24e+06)
+              Est.  stn bbox = 2.093e+06 (7.98e+05 1.30e+06)
+              cpu = 0:00:00.2 real = 0:00:00.0 mem = 1479.5M
+Iteration  4: Total net bbox = 1.551e+06 (6.74e+05 8.77e+05)
+              Est.  stn bbox = 1.701e+06 (7.32e+05 9.68e+05)
+              cpu = 0:00:04.4 real = 0:00:04.0 mem = 1459.5M
+Iteration  5: Total net bbox = 1.621e+06 (8.40e+05 7.81e+05)
+              Est.  stn bbox = 1.787e+06 (9.22e+05 8.65e+05)
+              cpu = 0:00:05.5 real = 0:00:05.0 mem = 1459.6M
+Iteration  6: Total net bbox = 1.672e+06 (8.82e+05 7.90e+05)
+              Est.  stn bbox = 1.838e+06 (9.63e+05 8.75e+05)
+              cpu = 0:00:29.9 real = 0:00:32.0 mem = 1476.3M
+Iteration  7: Total net bbox = 2.376e+06 (1.23e+06 1.15e+06)
+              Est.  stn bbox = 2.588e+06 (1.33e+06 1.26e+06)
+              cpu = 0:00:01.7 real = 0:00:01.0 mem = 1511.1M
+Iteration  8: Total net bbox = 2.376e+06 (1.23e+06 1.15e+06)
+              Est.  stn bbox = 2.588e+06 (1.33e+06 1.26e+06)
+              cpu = 0:00:16.3 real = 0:00:17.0 mem = 1511.1M
+Iteration  9: Total net bbox = 2.446e+06 (1.27e+06 1.17e+06)
+              Est.  stn bbox = 2.660e+06 (1.38e+06 1.28e+06)
+              cpu = 0:00:01.7 real = 0:00:01.0 mem = 1511.1M
+ RelinkConst: Total constraint = 3, Relinked 3 constraints . 
+User specified -fenceSpacing =  -1.0000 
+User specified fence spacing: -1.0000 um
+*** The nonConstraint instance area ratio is 0.665283 
+*** The prefixed-fenceArea/coreBoxArea is 0.000000, The auto-ConstraintArea/coreBoxArea is 0.871041 
+*** Total utilization of core box is 1.536324 
+Start Auto fence creation, hasNoConInst = 1  .
+
+================== Start Auto-Fence Creation ==================
+User define fence spacing: -1.0000 um
+Number of Movable Guide      : 0
+Number of Movable Region     : 0
+Number of Movable Fence      : 0
+Number of Movable Soft Guide : 0
+Total Movable Objects        : 0 (non-group: 0, group: 0)
+Total Prefixed Objects       : 0
+Total Partition Cut Objects  : 0
+
+
+
+Number of Nested Objects    : 0
+Number of Non-Nested Objects: 0
+Number of Nested Sets       : 0
+Number of Master&Clone Pairs: 0
+
+Fence Spacing: 2.0000 um
+Snap Spacing: X(0.6200 um), Y(5.0400 um)
+Fence2Core Spaceing: 0.0000 um
+
+==== Design Information ====
+Core site: (35340, 35280) - (3126660, 3124800)
+Design Whitespace% : 100.00%
+Maximum Logical Level: 0
+Has Non-constraint Instance: 1
+Allow Disjoint Whitespace: 0
+
+==To Place Non-Nested Objects==
+Targets: 
+Number of Total Targets: 0
+
+================== Finished Auto-Fence Creation ===============
+*** Done Auto-Fence Creation, (cpu = 0:00:00.0, mem = 1511.1M, mem_delta = 0.0M) ***
+End Auto fence creation 1.
+New Seed Flow: add CPU_wrapper as hinst seed
+New Seed Flow: add IM1 as hinst seed
+New Seed Flow: add DM1 as hinst seed
+MacroPlacer: Options: -pathConnWeight 1.000000 -bp 6 
+MacroPlacer: Reading Data for Block Placer
+MacroPlacer: total number of seeds contain macros: 3
+MacroPlacer: total number of seeds:                3
+MacroPlacer: total number of macros:               6
+MacroPlacer: total number of clusters:             4
+MacroPlacer: total number of ios:                  167
+MacroPlacer: total number of nets:                 819
+MacroPlacer: total number of keepouts:             0
+MacroPlacer: total number of fences:               0
+MacroPlacer: total number of fixed macros:         0
+MacroPlacer:            805 2-pins nets
+MacroPlacer:             13 3-pins nets
+MacroPlacer:              1 4-pins nets
+MacroPlacer:              0 5-pins nets
+MacroPlacer: Merging nets.
+MacroPlacer: total number of merged nets: 28
+-maxRouteLayer is specified which turned on auto macro spacing estimation.
+Macro spacing is determined by auto spacing estimation, ..., see documentation for details.
+MacroPlacer: Finished data reading for Block Placer
+... in Multi-Level Module Mode...
+Start generating contour.
+Completed data preparation.
+
+================== Start to Place This Module ===============
+
+==== Design Information ====
+Core site: (35340, 35280) - (3126660, 3124800)
+Num of Blocks 6 (M: 6, F: 0, O: 0)
+...
+Calling Macro Packer
+...
+	 Packing whole design.
+
+== Macro Placement Stage 0 (5)==
+
+== Macro Placement Stage 0 (2)==
+
+== Macro Placement Stage 1 (2)==
+
+== Macro Placement Stage 1 (1)==
+
+== Macro Placement Stage 2 (1)==
+
+---Succeed on placing blocks!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1543.1M, mem_delta = 0.0M) ***
+Num of placed blocks:   6 / 6
+Num of unplaced blocks: 0
+
+================== Done Placing This Module ===============
+Placing Macro with -bp mode 6.
+*** Done refineMacro, (cpu = 0:00:00.9, mem = 1543.1M, mem_delta = 32.0M) ***
+$$$$ RefineAll Successacros
+Iteration 10: Total net bbox = 3.543e+06 (1.90e+06 1.64e+06)
+              Est.  stn bbox = 3.770e+06 (2.03e+06 1.74e+06)
+              cpu = 0:00:50.9 real = 0:00:53.0 mem = 1543.1M
+*** cost = 3.543e+06 (1.90e+06 1.64e+06) (cpu for global=0:00:50.9) real=464367:54:31***
+Solver runtime cpu: 0:00:11.1 real: 0:00:11.3
+Core Placement runtime cpu: 0:00:16.7 real: 0:00:17.0
+*** Free Virtual Timing Model ...(mem=1543.1M)
+checkFence: found no fence violation.
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+Checking core/die box is on Grid.....
+Checking snap rule ......
+Checking Row is on grid......
+Checking AreaIO row.....
+Checking row out of die ...
+Checking routing blockage.....
+Checking components.....
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block IM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block DM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+Checking IO Pads out of die...
+Checking constraints (guide/region/fence).....
+Checking groups.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+
+Reporting Utilizations.....
+
+Core utilization  = 69.603547
+Effective Utilizations
+Average module density = 0.696.
+Density for the design = 0.696.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3056418 sites (9550695 um^2).
+Pin Density = 0.02844.
+            = total # of pins 86914 / total area 3056418.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-10013          8  Halo should be created around block %s a...
+WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+*** Message Summary: 12 warning(s), 0 error(s)
+
+<CMD> ::mp::clearAllSeed
+<CMD> setPlanDesignMode -effort high -incremental true -boundaryPlace true -fixPlacedMacros false -noColorize false
+<CMD> planDesign
+**WARN: (IMPAFP-9024):	planDesign is obsolete. This command will be removed from the next release.
+Deleted 0 physical inst  (cell - / prefix -).
+***** New seed flow = 1. *****  
+Auto Seed: CPU_wrapper
+Auto Seed: IM1
+Auto Seed: DM1
+Auto Macro Seed: DM1
+Auto Macro Seed: IM1
+Ignore PD Guides: numIgnoredGuide = 0 
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#2 (mem=1325.5M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:16.9 mem=1325.5M) ***
+**WARN: (IMPTS-141):	Cell (PDIX) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PDI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PUI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (BHD1) is marked as dont_touch, but is not marked as dont_use.
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:17.9 mem=1325.5M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 13527 (57.3%) nets
+3		: 5325 (22.6%) nets
+4     -	14	: 4550 (19.3%) nets
+15    -	39	: 168 (0.7%) nets
+40    -	79	: 15 (0.1%) nets
+80    -	159	: 5 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 1 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: timingDriven clkGateAware pinGuide congEffort=auto gpeffort=medium 
+#std cell=23739 (0 fixed + 23739 movable) #buf cell=3786 #inv cell=2380 #block=6 (6 floating + 0 preplaced)
+#ioInst=0 #net=23591 #term=86013 #term/net=3.65, #fixedIo=167, #floatIo=0, #fixedPin=0, #floatPin=167
+stdCell: 23739 single + 0 double + 0 multi
+Total standard cell length = 116.7782 (mm), area = 0.5886 (mm^2)
+Average module density = 0.696.
+Density for the design = 0.696.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3056418 sites (9550695 um^2).
+Pin Density = 0.02814.
+            = total # of pins 86013 / total area 3056418.
+Identified 5 spare or floating instances, with no clusters.
+=== lastAutoLevel = 10 
+User specified -module_cluster_mode =  0 
+Iteration  7: Total net bbox = 5.299e+07 (2.63e+07 2.67e+07)
+              Est.  stn bbox = 5.767e+07 (2.86e+07 2.91e+07)
+              cpu = 0:00:00.9 real = 0:00:01.0 mem = 1424.3M
+Iteration  8: Total net bbox = 5.299e+07 (2.63e+07 2.67e+07)
+              Est.  stn bbox = 5.767e+07 (2.86e+07 2.91e+07)
+              cpu = 0:00:16.9 real = 0:00:17.0 mem = 1439.0M
+Iteration  9: Total net bbox = 4.599e+07 (2.54e+07 2.05e+07)
+              Est.  stn bbox = 5.017e+07 (2.77e+07 2.24e+07)
+              cpu = 0:00:00.8 real = 0:00:00.0 mem = 1498.6M
+ RelinkConst: Total constraint = 3, Relinked 3 constraints . 
+New Seed Flow: add CPU_wrapper as hinst seed
+New Seed Flow: add IM1 as hinst seed
+New Seed Flow: add DM1 as hinst seed
+MacroPlacer: Options: -pathConnWeight 1.000000 -constraints {} -bp 6 
+MacroPlacer: Reading Data for Block Placer
+MacroPlacer: total number of seeds contain macros: 3
+MacroPlacer: total number of seeds:                3
+MacroPlacer: total number of macros:               6
+MacroPlacer: total number of clusters:             4
+MacroPlacer: total number of ios:                  167
+MacroPlacer: total number of nets:                 819
+MacroPlacer: total number of keepouts:             0
+MacroPlacer: total number of fences:               0
+MacroPlacer: total number of fixed macros:         0
+MacroPlacer:            805 2-pins nets
+MacroPlacer:             13 3-pins nets
+MacroPlacer:              1 4-pins nets
+MacroPlacer:              0 5-pins nets
+MacroPlacer: Merging nets.
+MacroPlacer: total number of merged nets: 28
+-maxRouteLayer is specified which turned on auto macro spacing estimation.
+Macro spacing is determined by auto spacing estimation, ..., see documentation for details.
+MacroPlacer: Finished data reading for Block Placer
+... in Multi-Level Module Mode...
+Start generating contour.
+Completed data preparation.
+
+================== Start to Place This Module ===============
+
+==== Design Information ====
+Core site: (35340, 35280) - (3126660, 3124800)
+Num of Blocks 6 (M: 6, F: 0, O: 0)
+...
+Calling Macro Packer
+...
+	 Packing whole design.
+
+== Macro Placement Stage 0 (5)==
+
+== Macro Placement Stage 0 (2)==
+
+== Macro Placement Stage 1 (2)==
+
+---Place failed!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1530.6M, mem_delta = 0.0M) ***
+
+== Macro Placement Stage 2 (1)==
+
+---Place failed!
+*** Done Packing ALL Macros as one group, (cpu = 0:00:00.0, mem = 1530.6M, mem_delta = 0.0M) ***
+
+== Macro Placement Stage 0 (7)==
+
+---Place failed!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1530.6M, mem_delta = 0.0M) ***
+ Calling Refine Macro to legalize non-constrained macros ...
+MacroPlacer: Options: -exclusiveSpacing -pathConnWeight 1.000000 
+MacroPlacer: fixing overlap at ( 1958.3130  717.1460 ).
+MacroPlacer: Start Search and Repair.  Iteration:1
+MacroPlacer:  number of overlaps: 14
+...
+MacroPlacer: End Search and Repair.
+MacroPlacer: Start final net length optimize.
+MacroPlacer: Finished final net length optimize.
+MacroPlacer: incr step:1   weightedSeedWireLength: 1064217068
+MacroPlacer: Program completes.
+Num of placed blocks:   0 / 6
+Num of unplaced blocks: 6
+
+================== Done Placing This Module ===============
+Placing Macro with -bp mode 6.
+*** Done refineMacro, (cpu = 0:00:01.0, mem = 1530.6M, mem_delta = 32.0M) ***
+$$$$ RefineAll Successacros
+Iteration 10: Total net bbox = 4.637e+07 (2.58e+07 2.06e+07)
+              Est.  stn bbox = 5.056e+07 (2.81e+07 2.25e+07)
+              cpu = 0:00:20.1 real = 0:00:20.0 mem = 1530.6M
+*** cost = 4.637e+07 (2.58e+07 2.06e+07) (cpu for global=0:00:20.1) real=464367:55:51***
+Solver runtime cpu: 0:00:00.0 real: 0:00:00.0
+Core Placement runtime cpu: 0:00:01.3 real: 0:00:01.0
+*** Free Virtual Timing Model ...(mem=1530.6M)
+checkFence: found no fence violation.
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+Checking core/die box is on Grid.....
+Checking snap rule ......
+Checking Row is on grid......
+Checking AreaIO row.....
+Checking row out of die ...
+Checking routing blockage.....
+Checking components.....
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block IM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block DM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+Checking IO Pads out of die...
+Checking constraints (guide/region/fence).....
+Checking groups.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+
+Reporting Utilizations.....
+
+Core utilization  = 69.603547
+Effective Utilizations
+Average module density = 0.696.
+Density for the design = 0.696.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3056418 sites (9550695 um^2).
+Pin Density = 0.02844.
+            = total # of pins 86914 / total area 3056418.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-10013          8  Halo should be created around block %s a...
+WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+*** Message Summary: 12 warning(s), 0 error(s)
+
+<CMD> ::mp::clearAllSeed
+<CMD> setPlanDesignMode -effort high -incremental true -boundaryPlace true -fixPlacedMacros false -noColorize false
+<CMD> planDesign
+**WARN: (IMPAFP-9024):	planDesign is obsolete. This command will be removed from the next release.
+Deleted 0 physical inst  (cell - / prefix -).
+***** New seed flow = 1. *****  
+Auto Seed: CPU_wrapper
+Auto Seed: IM1
+Auto Seed: DM1
+Auto Macro Seed: DM1
+Auto Macro Seed: IM1
+Ignore PD Guides: numIgnoredGuide = 0 
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#2 (mem=1368.0M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:16.2 mem=1368.0M) ***
+**WARN: (IMPTS-141):	Cell (PDIX) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PDI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PUI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (BHD1) is marked as dont_touch, but is not marked as dont_use.
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:17.1 mem=1368.0M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 13527 (57.3%) nets
+3		: 5325 (22.6%) nets
+4     -	14	: 4550 (19.3%) nets
+15    -	39	: 168 (0.7%) nets
+40    -	79	: 15 (0.1%) nets
+80    -	159	: 5 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 1 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: timingDriven clkGateAware pinGuide congEffort=auto gpeffort=medium 
+#std cell=23739 (0 fixed + 23739 movable) #buf cell=3786 #inv cell=2380 #block=6 (6 floating + 0 preplaced)
+#ioInst=0 #net=23591 #term=86013 #term/net=3.65, #fixedIo=167, #floatIo=0, #fixedPin=0, #floatPin=167
+stdCell: 23739 single + 0 double + 0 multi
+Total standard cell length = 116.7782 (mm), area = 0.5886 (mm^2)
+Average module density = 0.696.
+Density for the design = 0.696.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3056418 sites (9550695 um^2).
+Pin Density = 0.02814.
+            = total # of pins 86013 / total area 3056418.
+Identified 5 spare or floating instances, with no clusters.
+=== lastAutoLevel = 10 
+User specified -module_cluster_mode =  0 
+Iteration  7: Total net bbox = 5.304e+07 (2.62e+07 2.68e+07)
+              Est.  stn bbox = 5.771e+07 (2.86e+07 2.92e+07)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 1429.7M
+Iteration  8: Total net bbox = 5.304e+07 (2.62e+07 2.68e+07)
+              Est.  stn bbox = 5.771e+07 (2.86e+07 2.92e+07)
+              cpu = 0:00:16.7 real = 0:00:17.0 mem = 1444.3M
+Iteration  9: Total net bbox = 4.603e+07 (2.54e+07 2.06e+07)
+              Est.  stn bbox = 5.021e+07 (2.77e+07 2.25e+07)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 1501.9M
+ RelinkConst: Total constraint = 3, Relinked 3 constraints . 
+New Seed Flow: add CPU_wrapper as hinst seed
+New Seed Flow: add IM1 as hinst seed
+New Seed Flow: add DM1 as hinst seed
+MacroPlacer: Options: -pathConnWeight 1.000000 -constraints {} -bp 6 
+MacroPlacer: Reading Data for Block Placer
+MacroPlacer: total number of seeds contain macros: 3
+MacroPlacer: total number of seeds:                3
+MacroPlacer: total number of macros:               6
+MacroPlacer: total number of clusters:             4
+MacroPlacer: total number of ios:                  167
+MacroPlacer: total number of nets:                 819
+MacroPlacer: total number of keepouts:             0
+MacroPlacer: total number of fences:               0
+MacroPlacer: total number of fixed macros:         0
+MacroPlacer:            805 2-pins nets
+MacroPlacer:             13 3-pins nets
+MacroPlacer:              1 4-pins nets
+MacroPlacer:              0 5-pins nets
+MacroPlacer: Merging nets.
+MacroPlacer: total number of merged nets: 28
+-maxRouteLayer is specified which turned on auto macro spacing estimation.
+Macro spacing is determined by auto spacing estimation, ..., see documentation for details.
+MacroPlacer: Finished data reading for Block Placer
+... in Multi-Level Module Mode...
+Start generating contour.
+Completed data preparation.
+
+================== Start to Place This Module ===============
+
+==== Design Information ====
+Core site: (35340, 35280) - (3126660, 3124800)
+Num of Blocks 6 (M: 6, F: 0, O: 0)
+...
+Calling Macro Packer
+...
+	 Packing whole design.
+
+== Macro Placement Stage 0 (5)==
+
+== Macro Placement Stage 0 (2)==
+
+== Macro Placement Stage 1 (2)==
+
+---Place failed!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1533.9M, mem_delta = 0.0M) ***
+
+== Macro Placement Stage 2 (1)==
+
+---Place failed!
+*** Done Packing ALL Macros as one group, (cpu = 0:00:00.0, mem = 1533.9M, mem_delta = 0.0M) ***
+
+== Macro Placement Stage 0 (7)==
+
+---Place failed!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1533.9M, mem_delta = 0.0M) ***
+ Calling Refine Macro to legalize non-constrained macros ...
+MacroPlacer: Options: -exclusiveSpacing -pathConnWeight 1.000000 
+MacroPlacer: fixing overlap at ( 1723.1130 2605.0460 ).
+MacroPlacer: Start Search and Repair.  Iteration:1
+MacroPlacer:  number of overlaps: 14
+...
+MacroPlacer: End Search and Repair.
+MacroPlacer: Start final net length optimize.
+MacroPlacer: Finished final net length optimize.
+MacroPlacer: incr step:1   weightedSeedWireLength: 1064217068
+MacroPlacer: Program completes.
+Num of placed blocks:   0 / 6
+Num of unplaced blocks: 6
+
+================== Done Placing This Module ===============
+Placing Macro with -bp mode 6.
+*** Done refineMacro, (cpu = 0:00:01.0, mem = 1533.9M, mem_delta = 32.0M) ***
+$$$$ RefineAll Successacros
+Iteration 10: Total net bbox = 4.637e+07 (2.58e+07 2.06e+07)
+              Est.  stn bbox = 5.056e+07 (2.81e+07 2.25e+07)
+              cpu = 0:00:19.7 real = 0:00:20.0 mem = 1533.9M
+*** cost = 4.637e+07 (2.58e+07 2.06e+07) (cpu for global=0:00:19.7) real=464367:56:48***
+Solver runtime cpu: 0:00:00.0 real: 0:00:00.0
+Core Placement runtime cpu: 0:00:01.3 real: 0:00:01.0
+*** Free Virtual Timing Model ...(mem=1533.9M)
+checkFence: found no fence violation.
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+Checking core/die box is on Grid.....
+Checking snap rule ......
+Checking Row is on grid......
+Checking AreaIO row.....
+Checking row out of die ...
+Checking routing blockage.....
+Checking components.....
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block IM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block DM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+Checking IO Pads out of die...
+Checking constraints (guide/region/fence).....
+Checking groups.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+
+Reporting Utilizations.....
+
+Core utilization  = 69.603547
+Effective Utilizations
+Average module density = 0.696.
+Density for the design = 0.696.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3056418 sites (9550695 um^2).
+Pin Density = 0.02844.
+            = total # of pins 86914 / total area 3056418.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-10013          8  Halo should be created around block %s a...
+WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+*** Message Summary: 12 warning(s), 0 error(s)
+
+<CMD> ::mp::clearAllSeed
+<CMD> setPlanDesignMode -effort high -incremental true -boundaryPlace true -fixPlacedMacros false -noColorize false
+<CMD> planDesign
+**WARN: (IMPAFP-9024):	planDesign is obsolete. This command will be removed from the next release.
+Deleted 0 physical inst  (cell - / prefix -).
+***** New seed flow = 1. *****  
+Auto Seed: CPU_wrapper
+Auto Seed: IM1
+Auto Seed: DM1
+Auto Macro Seed: DM1
+Auto Macro Seed: IM1
+Ignore PD Guides: numIgnoredGuide = 0 
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#2 (mem=1415.3M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:16.1 mem=1415.3M) ***
+**WARN: (IMPTS-141):	Cell (PDIX) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PDI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PUI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (BHD1) is marked as dont_touch, but is not marked as dont_use.
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:17.0 mem=1415.3M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 13527 (57.3%) nets
+3		: 5325 (22.6%) nets
+4     -	14	: 4550 (19.3%) nets
+15    -	39	: 168 (0.7%) nets
+40    -	79	: 15 (0.1%) nets
+80    -	159	: 5 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 1 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: timingDriven clkGateAware pinGuide congEffort=auto gpeffort=medium 
+#std cell=23739 (0 fixed + 23739 movable) #buf cell=3786 #inv cell=2380 #block=6 (6 floating + 0 preplaced)
+#ioInst=0 #net=23591 #term=86013 #term/net=3.65, #fixedIo=167, #floatIo=0, #fixedPin=0, #floatPin=167
+stdCell: 23739 single + 0 double + 0 multi
+Total standard cell length = 116.7782 (mm), area = 0.5886 (mm^2)
+Average module density = 0.696.
+Density for the design = 0.696.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3056418 sites (9550695 um^2).
+Pin Density = 0.02814.
+            = total # of pins 86013 / total area 3056418.
+Identified 5 spare or floating instances, with no clusters.
+=== lastAutoLevel = 10 
+User specified -module_cluster_mode =  0 
+Iteration  7: Total net bbox = 5.304e+07 (2.62e+07 2.68e+07)
+              Est.  stn bbox = 5.771e+07 (2.86e+07 2.92e+07)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 1431.0M
+Iteration  8: Total net bbox = 5.304e+07 (2.62e+07 2.68e+07)
+              Est.  stn bbox = 5.771e+07 (2.86e+07 2.92e+07)
+              cpu = 0:00:17.1 real = 0:00:17.0 mem = 1445.7M
+Iteration  9: Total net bbox = 4.603e+07 (2.54e+07 2.06e+07)
+              Est.  stn bbox = 5.021e+07 (2.77e+07 2.25e+07)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 1504.3M
+ RelinkConst: Total constraint = 3, Relinked 3 constraints . 
+New Seed Flow: add CPU_wrapper as hinst seed
+New Seed Flow: add IM1 as hinst seed
+New Seed Flow: add DM1 as hinst seed
+MacroPlacer: Options: -pathConnWeight 1.000000 -constraints {} -bp 6 
+MacroPlacer: Reading Data for Block Placer
+MacroPlacer: total number of seeds contain macros: 3
+MacroPlacer: total number of seeds:                3
+MacroPlacer: total number of macros:               6
+MacroPlacer: total number of clusters:             4
+MacroPlacer: total number of ios:                  167
+MacroPlacer: total number of nets:                 819
+MacroPlacer: total number of keepouts:             0
+MacroPlacer: total number of fences:               0
+MacroPlacer: total number of fixed macros:         0
+MacroPlacer:            805 2-pins nets
+MacroPlacer:             13 3-pins nets
+MacroPlacer:              1 4-pins nets
+MacroPlacer:              0 5-pins nets
+MacroPlacer: Merging nets.
+MacroPlacer: total number of merged nets: 28
+-maxRouteLayer is specified which turned on auto macro spacing estimation.
+Macro spacing is determined by auto spacing estimation, ..., see documentation for details.
+MacroPlacer: Finished data reading for Block Placer
+... in Multi-Level Module Mode...
+Start generating contour.
+Completed data preparation.
+
+================== Start to Place This Module ===============
+
+==== Design Information ====
+Core site: (35340, 35280) - (3126660, 3124800)
+Num of Blocks 6 (M: 6, F: 0, O: 0)
+...
+Calling Macro Packer
+...
+	 Packing whole design.
+
+== Macro Placement Stage 0 (5)==
+
+== Macro Placement Stage 0 (2)==
+
+== Macro Placement Stage 1 (2)==
+
+---Place failed!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1536.3M, mem_delta = 0.0M) ***
+
+== Macro Placement Stage 2 (1)==
+
+---Place failed!
+*** Done Packing ALL Macros as one group, (cpu = 0:00:00.0, mem = 1536.3M, mem_delta = 0.0M) ***
+
+== Macro Placement Stage 0 (7)==
+
+---Place failed!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1536.3M, mem_delta = 0.0M) ***
+ Calling Refine Macro to legalize non-constrained macros ...
+MacroPlacer: Options: -exclusiveSpacing -pathConnWeight 1.000000 
+MacroPlacer: fixing overlap at ( 1723.1130 2605.0460 ).
+MacroPlacer: Start Search and Repair.  Iteration:1
+MacroPlacer:  number of overlaps: 14
+...
+MacroPlacer: End Search and Repair.
+MacroPlacer: Start final net length optimize.
+MacroPlacer: Finished final net length optimize.
+MacroPlacer: incr step:1   weightedSeedWireLength: 1064217068
+MacroPlacer: Program completes.
+Num of placed blocks:   0 / 6
+Num of unplaced blocks: 6
+
+================== Done Placing This Module ===============
+Placing Macro with -bp mode 6.
+*** Done refineMacro, (cpu = 0:00:01.0, mem = 1536.3M, mem_delta = 32.0M) ***
+$$$$ RefineAll Successacros
+Iteration 10: Total net bbox = 4.637e+07 (2.58e+07 2.06e+07)
+              Est.  stn bbox = 5.056e+07 (2.81e+07 2.25e+07)
+              cpu = 0:00:20.1 real = 0:00:20.0 mem = 1536.3M
+*** cost = 4.637e+07 (2.58e+07 2.06e+07) (cpu for global=0:00:20.1) real=464367:57:35***
+Solver runtime cpu: 0:00:00.0 real: 0:00:00.0
+Core Placement runtime cpu: 0:00:01.3 real: 0:00:02.0
+*** Free Virtual Timing Model ...(mem=1536.3M)
+checkFence: found no fence violation.
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+Checking core/die box is on Grid.....
+Checking snap rule ......
+Checking Row is on grid......
+Checking AreaIO row.....
+Checking row out of die ...
+Checking routing blockage.....
+Checking components.....
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block IM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block DM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+Checking IO Pads out of die...
+Checking constraints (guide/region/fence).....
+Checking groups.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+
+Reporting Utilizations.....
+
+Core utilization  = 69.603547
+Effective Utilizations
+Average module density = 0.696.
+Density for the design = 0.696.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3056418 sites (9550695 um^2).
+Pin Density = 0.02844.
+            = total # of pins 86914 / total area 3056418.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-10013          8  Halo should be created around block %s a...
+WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+*** Message Summary: 12 warning(s), 0 error(s)
+
+<CMD> uiSetTool move
+<CMD> selectInst CPU_wrapper/L1CD/TA/i_tag_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 2022.902 2970.025 2414.742 3126.825
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CI/DA/i_data_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2740.356 29.936 2897.156 1917.836
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CI/TA/i_tag_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 2143.773 35.28 2535.613 192.08
+<CMD> zoomBox -1118.99200 -94.85600 4772.64400 2859.81900
+<CMD> zoomBox -385.63700 -35.33700 4622.25300 2476.13600
+<CMD> zoomBox 206.54700 20.67400 4463.25300 2155.42600
+<CMD> zoomBox 709.90300 68.28400 4328.10300 1882.82300
+<CMD> zoomBox 1364.60100 -322.26400 3978.75100 988.74100
+<CMD> zoomBox 1989.37200 -174.26000 3594.78900 630.86200
+<CMD> zoomBox 2250.50300 -95.76400 3236.43100 398.68200
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CI/DA/i_data_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2739.768 36.462 2896.568 1924.362
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CI/TA/i_tag_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 2143.77 37.058 2535.61 193.858
+<CMD> ::mp::clearAllSeed
+<CMD> setPlanDesignMode -effort high -incremental true -boundaryPlace true -fixPlacedMacros false -noColorize false
+<CMD> planDesign
+**WARN: (IMPAFP-9024):	planDesign is obsolete. This command will be removed from the next release.
+Deleted 0 physical inst  (cell - / prefix -).
+***** New seed flow = 1. *****  
+Auto Macro Seed: DM1
+Auto Macro Seed: IM1
+Ignore PD Guides: numIgnoredGuide = 0 
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#2 (mem=1449.6M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:16.8 mem=1449.6M) ***
+**WARN: (IMPTS-141):	Cell (PDIX) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PDI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PUI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (BHD1) is marked as dont_touch, but is not marked as dont_use.
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:17.7 mem=1449.6M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 13527 (57.3%) nets
+3		: 5325 (22.6%) nets
+4     -	14	: 4550 (19.3%) nets
+15    -	39	: 168 (0.7%) nets
+40    -	79	: 15 (0.1%) nets
+80    -	159	: 5 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 1 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: timingDriven clkGateAware pinGuide congEffort=auto gpeffort=medium 
+#std cell=23739 (0 fixed + 23739 movable) #buf cell=3786 #inv cell=2380 #block=6 (3 floating + 3 preplaced)
+#ioInst=0 #net=23591 #term=86013 #term/net=3.65, #fixedIo=167, #floatIo=0, #fixedPin=0, #floatPin=167
+stdCell: 23739 single + 0 double + 0 multi
+Total standard cell length = 116.7782 (mm), area = 0.5886 (mm^2)
+Average module density = 0.683.
+Density for the design = 0.683.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1804966 sites (5640156 um^2)) / alloc_area 2917934 sites (9117961 um^2).
+Pin Density = 0.02814.
+            = total # of pins 86013 / total area 3056418.
+Identified 5 spare or floating instances, with no clusters.
+=== lastAutoLevel = 10 
+User specified -module_cluster_mode =  0 
+Iteration  7: Total net bbox = 6.538e+07 (3.29e+07 3.25e+07)
+              Est.  stn bbox = 7.115e+07 (3.58e+07 3.54e+07)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 1481.6M
+Iteration  8: Total net bbox = 6.538e+07 (3.29e+07 3.25e+07)
+              Est.  stn bbox = 7.115e+07 (3.58e+07 3.54e+07)
+              cpu = 0:00:17.3 real = 0:00:17.0 mem = 1496.3M
+Iteration  9: Total net bbox = 6.538e+07 (3.29e+07 3.25e+07)
+              Est.  stn bbox = 7.115e+07 (3.58e+07 3.54e+07)
+              cpu = 0:00:00.7 real = 0:00:01.0 mem = 1533.3M
+ RelinkConst: Total constraint = 0, Relinked 0 constraints . 
+New Seed Flow: add IM1 as hinst seed
+New Seed Flow: add DM1 as hinst seed
+MacroPlacer: Options: -pathConnWeight 1.000000 -constraints {} -bp 6 
+MacroPlacer: Reading Data for Block Placer
+MacroPlacer: total number of seeds contain macros: 3
+MacroPlacer: total number of seeds:                6
+MacroPlacer: total number of macros:               6
+MacroPlacer: total number of clusters:             3
+MacroPlacer: total number of ios:                  167
+MacroPlacer: total number of nets:                 819
+MacroPlacer: total number of keepouts:             0
+MacroPlacer: total number of fences:               0
+MacroPlacer: total number of fixed macros:         3
+MacroPlacer:            805 2-pins nets
+MacroPlacer:             13 3-pins nets
+MacroPlacer:              1 4-pins nets
+MacroPlacer:              0 5-pins nets
+MacroPlacer: Merging nets.
+MacroPlacer: total number of merged nets: 28
+-maxRouteLayer is specified which turned on auto macro spacing estimation.
+Macro spacing is determined by auto spacing estimation, ..., see documentation for details.
+MacroPlacer: Finished data reading for Block Placer
+... in Multi-Level Module Mode...
+Start generating contour.
+Completed data preparation.
+
+================== Start to Place This Module ===============
+
+==== Design Information ====
+Core site: (35340, 35280) - (3126660, 3124800)
+Num of Blocks 6 (M: 3, F: 3, O: 0)
+...
+Calling Macro Packer
+...
+	 Packing whole design.
+
+== Macro Placement Stage 0 (3)==
+
+== Macro Placement Stage 0 (3)==
+
+== Macro Placement Stage 1 (3)==
+
+---Place failed!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1565.3M, mem_delta = 0.0M) ***
+
+== Macro Placement Stage 2 (1)==
+
+---Place failed!
+*** Done Packing ALL Macros as one group, (cpu = 0:00:00.0, mem = 1565.3M, mem_delta = 0.0M) ***
+
+== Macro Placement Stage 0 (3)==
+
+---Place failed!
+*** Done Macro Placing, (cpu = 0:00:00.0, mem = 1565.3M, mem_delta = 0.0M) ***
+ Calling Refine Macro to legalize non-constrained macros ...
+MacroPlacer: Options: -exclusiveSpacing -pathConnWeight 1.000000 
+MacroPlacer: fixing overlap at ( 1206.5200 1721.4400 ).
+MacroPlacer: Start Search and Repair.  Iteration:1
+MacroPlacer:  number of overlaps: 10
+...
+MacroPlacer: End Search and Repair.
+MacroPlacer: fixing overlap at (  259.3400  519.8200 ).
+MacroPlacer: Start Search and Repair.  Iteration:2
+MacroPlacer:  number of overlaps: 2
+...
+MacroPlacer: End Search and Repair.
+MacroPlacer: Start final net length optimize.
+MacroPlacer: Finished final net length optimize.
+MacroPlacer: incr step:1   weightedSeedWireLength: 3962379558
+MacroPlacer: Program completes.
+Num of placed blocks:   0 / 3
+Num of unplaced blocks: 3
+
+================== Done Placing This Module ===============
+Placing Macro with -bp mode 6.
+*** Done refineMacro, (cpu = 0:00:01.7, mem = 1565.3M, mem_delta = 32.0M) ***
+$$$$ RefineAll Successacros
+Iteration 10: Total net bbox = 6.514e+07 (3.27e+07 3.24e+07)
+              Est.  stn bbox = 7.092e+07 (3.56e+07 3.53e+07)
+              cpu = 0:00:20.8 real = 0:00:21.0 mem = 1565.3M
+*** cost = 6.514e+07 (3.27e+07 3.24e+07) (cpu for global=0:00:20.8) real=464368:00:52***
+Solver runtime cpu: 0:00:00.0 real: 0:00:00.0
+Core Placement runtime cpu: 0:00:01.2 real: 0:00:02.0
+*** Free Virtual Timing Model ...(mem=1565.3M)
+checkFence: found no fence violation.
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+Checking core/die box is on Grid.....
+Checking snap rule ......
+Checking Row is on grid......
+Checking AreaIO row.....
+Checking row out of die ...
+Checking routing blockage.....
+Checking components.....
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block IM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block DM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+Checking IO Pads out of die...
+Checking constraints (guide/region/fence).....
+Checking groups.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+
+Reporting Utilizations.....
+
+Core utilization  = 69.595259
+Effective Utilizations
+Average module density = 0.682.
+Density for the design = 0.682.
+       = (stdcell_area 188352 sites (588562 um^2) + block_area 1804966 sites (5640156 um^2)) / alloc_area 2921289 sites (9128444 um^2).
+Pin Density = 0.02844.
+            = total # of pins 86914 / total area 3056418.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-10013          8  Halo should be created around block %s a...
+WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+*** Message Summary: 12 warning(s), 0 error(s)
+
+<CMD> uiSetTool select
+<CMD> zoomBox 1978.83400 -210.35500 3584.25500 594.76900
+<CMD> zoomBox 1854.64100 -262.65600 3743.37200 684.54900
+<CMD> zoomBox 1546.23400 -410.97000 4160.39600 900.04100
+<CMD> zoomBox 530.00500 -898.93300 5537.91800 1612.55200
+<CMD> zoomBox -1416.77100 -1833.71700 8176.81900 2977.50000
+<CMD> zoomBox 659.99400 -129.96500 4916.72400 2004.79900
+<CMD> zoomBox 1017.83600 -57.78200 4636.05600 1756.76700
+<CMD> zoomBox 1322.00100 3.57300 4397.48900 1545.94000
+<CMD> uiSetTool move
+<CMD> selectInst CPU_wrapper/L1CI/DA/i_data_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2597.369 36.46 2754.169 1924.36
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CD/DA/i_data_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2968.43 35.173 3125.23 1923.073
+<CMD> zoomBox 1958.46900 318.27000 3563.89400 1123.39600
+<CMD> zoomBox 2151.86500 413.51600 3311.78600 995.22000
+<CMD> zoomBox 1312.14300 2.29400 4387.64000 1544.66600
+<CMD> uiSetTool select
+<CMD> zoomBox 813.61900 -324.00700 5070.36300 1810.76400
+<CMD> zoomBox -1273.79200 -1789.00700 8319.84000 3022.23100
+<CMD> zoomBox -4448.56100 -4240.07600 13929.82600 4976.74600
+<CMD> zoomBox -1948.89300 -1753.91000 9337.73600 3906.37200
+<CMD> zoomBox -1823.75300 -515.85900 6330.83700 3573.69500
+<CMD> uiSetTool move
+<CMD> deselectAll
+<CMD> selectInst IM1/i_SRAM
+<CMD> setObjFPlanBox Instance IM1/i_SRAM 3211.414 1530.095 5131.554 2921.695
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CI/DA/i_data_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 47.528 1223.117 204.328 3111.017
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CD/DA/i_data_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 506.852 1221.827 663.652 3109.727
+<CMD> deselectAll
+<CMD> selectInst DM1/i_SRAM
+<CMD> setObjFPlanBox Instance DM1/i_SRAM 2735.77 -16.0 4655.91 1375.6
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CI/TA/i_tag_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 35.247 37.06 427.087 193.86
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CD/TA/i_tag_array
+<CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 600.872 47.508 992.712 204.308
+<CMD> deselectAll
+<CMD> selectInst DM1/i_SRAM
+<CMD> setObjFPlanBox Instance DM1/i_SRAM 1171.54 42.842 3091.68 1434.442
+<CMD> setObjFPlanBox Instance DM1/i_SRAM 1205.865 37.936 3126.005 1429.536
+<CMD> deselectAll
+<CMD> selectInst IM1/i_SRAM
+<CMD> setObjFPlanBox Instance IM1/i_SRAM 1205.861 1731.135 3126.001 3122.735
+<CMD> uiSetTool select
+<CMD> ::mp::clearAllSeed
+<CMD> setPlanDesignMode -effort high -incremental true -boundaryPlace true -fixPlacedMacros false -noColorize false
+<CMD> planDesign
+**WARN: (IMPAFP-9024):	planDesign is obsolete. This command will be removed from the next release.
+Deleted 0 physical inst  (cell - / prefix -).
+***** New seed flow = 1. *****  
+Ignore PD Guides: numIgnoredGuide = 0 
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#2 (mem=1433.7M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:16.9 mem=1442.4M) ***
+**WARN: (IMPTS-141):	Cell (PDIX) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PDI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (PUI) is marked as dont_touch, but is not marked as dont_use.
+**WARN: (IMPTS-141):	Cell (BHD1) is marked as dont_touch, but is not marked as dont_use.
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:17.8 mem=1442.4M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 13527 (57.3%) nets
+3		: 5325 (22.6%) nets
+4     -	14	: 4550 (19.3%) nets
+15    -	39	: 168 (0.7%) nets
+40    -	79	: 15 (0.1%) nets
+80    -	159	: 5 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 1 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: timingDriven clkGateAware pinGuide congEffort=auto gpeffort=medium 
+#std cell=23739 (0 fixed + 23739 movable) #buf cell=3786 #inv cell=2380 #block=6 (0 floating + 6 preplaced)
+#ioInst=0 #net=23591 #term=86013 #term/net=3.65, #fixedIo=167, #floatIo=0, #fixedPin=0, #floatPin=167
+stdCell: 23739 single + 0 double + 0 multi
+Total standard cell length = 116.7782 (mm), area = 0.5886 (mm^2)
+Average module density = 0.177.
+Density for the design = 0.177.
+       = stdcell_area 188352 sites (588562 um^2) / alloc_area 1065662 sites (3329980 um^2).
+Pin Density = 0.02814.
+            = total # of pins 86013 / total area 3056418.
+Identified 5 spare or floating instances, with no clusters.
+=== lastAutoLevel = 10 
+User specified -module_cluster_mode =  0 
+Iteration  7: Total net bbox = 6.548e+07 (3.29e+07 3.26e+07)
+              Est.  stn bbox = 7.125e+07 (3.58e+07 3.55e+07)
+              cpu = 0:00:00.6 real = 0:00:01.0 mem = 1468.6M
+Iteration  8: Total net bbox = 6.548e+07 (3.29e+07 3.26e+07)
+              Est.  stn bbox = 7.125e+07 (3.58e+07 3.55e+07)
+              cpu = 0:00:17.9 real = 0:00:17.0 mem = 1483.2M
+Iteration  9: Total net bbox = 6.548e+07 (3.29e+07 3.26e+07)
+              Est.  stn bbox = 7.125e+07 (3.58e+07 3.55e+07)
+              cpu = 0:00:00.6 real = 0:00:01.0 mem = 1515.2M
+ RelinkConst: Total constraint = 0, Relinked 0 constraints . 
+Iteration 10: Total net bbox = 6.548e+07 (3.29e+07 3.26e+07)
+              Est.  stn bbox = 7.125e+07 (3.58e+07 3.55e+07)
+              cpu = 0:00:19.6 real = 0:00:20.0 mem = 1515.2M
+*** cost = 6.548e+07 (3.29e+07 3.26e+07) (cpu for global=0:00:19.6) real=464368:03:29***
+Solver runtime cpu: 0:00:00.0 real: 0:00:00.0
+Core Placement runtime cpu: 0:00:01.0 real: 0:00:01.0
+*** Free Virtual Timing Model ...(mem=1515.2M)
+checkFence: found no fence violation.
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+Checking core/die box is on Grid.....
+Checking snap rule ......
+Checking Row is on grid......
+Checking AreaIO row.....
+Checking row out of die ...
+Checking routing blockage.....
+Checking components.....
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block IM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+**WARN: (IMPFP-10013):	Halo should be created around block DM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+Checking IO Pads out of die...
+Checking constraints (guide/region/fence).....
+Checking groups.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+
+Reporting Utilizations.....
+
+Core utilization  = 69.603399
+Effective Utilizations
+Average module density = 0.170.
+Density for the design = 0.170.
+       = stdcell_area 188352 sites (588562 um^2) / alloc_area 1108638 sites (3464272 um^2).
+Pin Density = 0.02844.
+            = total # of pins 86914 / total area 3056418.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-10013          8  Halo should be created around block %s a...
+WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+*** Message Summary: 12 warning(s), 0 error(s)
+
+<CMD> addHaloToBlock {15 15 15 15} -allBlock
+<CMD> redraw
+<CMD> addRoutingHalo -allBlocks -space 5 -bottom metal1 -top metal6
+<CMD> redraw
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 3
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 24 wires.
+ViaGen created 72 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |       12       |       NA       |
+|   via  |       72       |        0       |
+| metal2 |       12       |       NA       |
++--------+----------------+----------------+
+<CMD> zoomBox -2291.89700 -882.75900 2167.44200 3109.30100
+<CMD> zoomBox -2830.43800 -1299.13600 2415.84300 3397.40500
+<CMD> zoomBox -3462.81800 -1787.79300 2709.27700 3737.54900
+<CMD> selectInst CPU_wrapper/L1CI/DA/i_data_array
+<CMD> deselectAll
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 3 -use_interleaving_wire_group 1
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 5 wires.
+ViaGen created 12 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        5       |       NA       |
+|   via  |       12       |        0       |
++--------+----------------+----------------+
+<CMD> selectInst CPU_wrapper/L1CI/DA/i_data_array
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {rt bl } -skip_side {top left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 4 wires.
+ViaGen created 6 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        2       |       NA       |
+|   via  |        6       |        0       |
+| metal2 |        2       |       NA       |
++--------+----------------+----------------+
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CD/DA/i_data_array
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lt rt } -skip_side {top } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 6 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        2       |       NA       |
+|   via  |        8       |        0       |
+| metal2 |        4       |       NA       |
++--------+----------------+----------------+
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lt rt } -skip_side {top } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 2 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   via  |        8       |        0       |
+| metal2 |        2       |       NA       |
++--------+----------------+----------------+
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CI/DA/i_data_array
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {rt bl } -skip_side {top left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {rt bl } -skip_side {top left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+<CMD> deselectAll
+<CMD> selectInst IM1/i_SRAM
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lt br } -skip_side {top right } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 4 wires.
+ViaGen created 6 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        2       |       NA       |
+|   via  |        6       |        0       |
+| metal2 |        2       |       NA       |
++--------+----------------+----------------+
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lt br } -skip_side {top right } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 2 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   via  |        8       |        0       |
+| metal2 |        2       |       NA       |
++--------+----------------+----------------+
+<CMD> deselectAll
+<CMD> selectInst DM1/i_SRAM
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lb tr } -skip_side {right } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 2 wires.
+ViaGen created 4 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        2       |       NA       |
+|   via  |        4       |        0       |
++--------+----------------+----------------+
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lb tr } -skip_side {right } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 2 wires.
+ViaGen created 4 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   via  |        4       |        0       |
+| metal2 |        2       |       NA       |
++--------+----------------+----------------+
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CD/TA/i_tag_array
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lb rb } -skip_side {bottom } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 4 wires.
+ViaGen created 10 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   via  |       10       |        0       |
+| metal2 |        4       |       NA       |
++--------+----------------+----------------+
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lb rb } -skip_side {bottom } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+<CMD> deselectAll
+<CMD> selectInst CPU_wrapper/L1CI/TA/i_tag_array
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {tl rb } -skip_side {bottom left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 2 wires.
+ViaGen created 4 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   via  |        4       |        0       |
+| metal2 |        2       |       NA       |
++--------+----------------+----------------+
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {tl rb } -skip_side {bottom left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1500.6M)
+Ring generation is complete.
+<CMD> setSrouteMode -viaConnectToShape { ring blockring blockpin }
+<CMD> sroute -connect { blockPin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { VCC GND } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal6(6) }
+*** Begin SPECIAL ROUTE on Fri Dec 23 00:10:30 2022 ***
+SPECIAL ROUTE ran on directory: /home/user2/Vsd22/Vsd22113/Desktop/HW4_4/build
+SPECIAL ROUTE ran on machine: vlsicad9 (Linux 3.10.0-957.21.3.el7.x86_64 Xeon 1.60Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VCC GND"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteConnectCorePin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 6
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring stripe coverpin noshape blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 6
+srouteTopTargetLayerLimit set to 6
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 2518.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 12 layers, 6 routing layers, 1 overlap layer
+Read in 178 macros, 178 used
+Read in 181 components
+  175 core components: 175 unplaced, 0 placed, 0 fixed
+  6 block/ring components: 0 unplaced, 0 placed, 6 fixed
+Read in 167 physical pins
+  167 physical pins: 0 unplaced, 167 placed, 0 fixed
+Read in 7 blockages
+Read in 167 nets
+Read in 2 special nets, 2 routed
+Read in 529 terminals
+2 nets selected.
+
+Begin power routing ...
+  Number of Block ports routed: 2886
+  Number of Power Bump ports routed: 0
+End power routing: cpu: 0:00:04, real: 0:00:04, peak: 2654.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 167 io pins ...
+ Updating DB with 3 via definition ...
+
+sroute post-processing starts at Fri Dec 23 00:10:34 2022
+The viaGen is rebuilding shadow vias for net VCC.
+sroute post-processing ends at Fri Dec 23 00:10:34 2022
+sroute created 2890 wires.
+ViaGen created 5813 vias, deleted 2 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |      1219      |       NA       |
+|   via  |      4998      |        2       |
+| metal2 |      1213      |       NA       |
+|  via2  |       812      |        0       |
+| metal3 |       454      |       NA       |
+|  via3  |        1       |        0       |
+| metal4 |        3       |       NA       |
+|  via4  |        2       |        0       |
+| metal5 |        1       |       NA       |
++--------+----------------+----------------+
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal4 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {VCC GND} -layer metal4 -direction vertical -width 1.2 -spacing 0.28 -set_to_set_distance 20 -start_from left -start_offset 10 -stop_offset 10 -switch_layer_over_obs true -merge_stripes_value auto -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1564.7M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Starting stripe generation ...
+Auto merging with block rings is ON.
+Non-Default Mode Option Settings :
+  NONE
+The core ring for VCC is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for GND is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via2 at (86.82, 1219.67) (86.91, 1220.87).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (146.820007, 1223.040039) (148.020004, 1224.239990).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (526.820007, 1221.750000) (528.020020, 1222.949951).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (606.820007, 1221.750000) (608.020020, 1222.949951).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (746.820007, 203.190002) (748.020020, 204.389999).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (786.820007, 47.430000) (788.020020, 48.630001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (846.820007, 47.430000) (848.020020, 48.630001).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via2 at (967.79, 44.06) (968.02, 45.26).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via2 at (1347.72, 34.49) (1347.96, 35.69).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1366.819946, 37.860001) (1368.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1426.819946, 37.860001) (1428.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1506.819946, 37.860001) (1508.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1626.819946, 37.860001) (1628.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1686.819946, 37.860001) (1688.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1706.819946, 1428.420044) (1708.020020, 1429.619995).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1766.819946, 37.860001) (1768.020020, 39.060001).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via2 at (1807.76, 34.49) (1808.00, 35.69).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1886.819946, 37.860001) (1888.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1906.819946, 1428.420044) (1908.020020, 1429.619995).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (1966.819946, 37.860001) (1968.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (2026.819946, 37.860001) (2028.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (2146.820068, 37.860001) (2148.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (2226.820068, 37.860001) (2228.020020, 39.060001).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (2266.820068, 1428.420044) (2268.020020, 1429.619995).
+**WARN: (EMS-27):	Message (IMPPP-570) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via2 at (2306.86, 34.49) (2307.10, 35.69).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via2 at (2727.84, 34.49) (2728.02, 35.69).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via2 at (2766.90, 34.49) (2767.14, 35.69).
+Stripe generation is complete.
+vias are now being generated.
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (546.39, 1221.83) (546.54, 1222.95).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (546.39, 3108.61) (546.54, 3109.73).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (646.53, 203.19) (646.54, 204.31).
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1253.48) (1206.98, 1256.72)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1402.44) (1206.98, 1405.68)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1410.28) (1206.98, 1413.52)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1418.12) (1206.98, 1421.36)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1378.92) (1206.98, 1382.16)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1386.76) (1206.98, 1390.00)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1394.60) (1206.98, 1397.84)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1316.20) (1206.98, 1319.44)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1324.04) (1206.98, 1327.28)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1331.88) (1206.98, 1335.12)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1339.72) (1206.98, 1342.96)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1261.32) (1206.98, 1264.56)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1300.52) (1206.98, 1303.76)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1308.36) (1206.98, 1311.60)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1222.12) (1206.98, 1225.36)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1229.96) (1206.98, 1233.20)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1237.80) (1206.98, 1241.04)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1245.64) (1206.98, 1248.88)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1167.24) (1206.98, 1170.48)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal6 at (1205.86, 1175.08) (1206.98, 1178.32)
+**WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (1425.34, 37.94) (1425.56, 39.06).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (1885.34, 37.94) (1885.60, 39.06).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (2525.34, 1428.42) (2525.44, 1429.54).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (2906.30, 37.94) (2906.54, 39.06).
+addStripe created 616 wires.
+ViaGen created 753 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal4 |       448      |       NA       |
+|  via4  |       376      |        0       |
+|  via5  |       377      |        0       |
+| metal6 |       168      |       NA       |
++--------+----------------+----------------+
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal4 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {VCC GND} -layer metal5 -direction horizontal -width 1.2 -spacing 0.28 -set_to_set_distance 20 -start_from bottom -start_offset 10 -stop_offset 10 -switch_layer_over_obs true -merge_stripes_value auto -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1564.7M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Starting stripe generation ...
+Auto merging with block rings is ON.
+Non-Default Mode Option Settings :
+  NONE
+The core ring for VCC is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for GND is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (628.79, 46.76) (629.99, 46.91).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (628.79, 46.76) (629.99, 46.91).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (688.79, 46.76) (689.99, 46.91).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (701.890015, 47.509998) (702.770020, 47.959999).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (888.79, 46.76) (889.99, 46.91).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (888.79, 46.76) (889.99, 46.91).
+Stripe generation is complete.
+vias are now being generated.
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal5 & metal4 at (592.79, 205.28) (595.79, 206.48)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal5 & metal4 at (646.80, 205.28) (649.80, 206.48)
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (1205.86, 226.44) (1206.98, 226.48).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (3124.88, 226.44) (3126.00, 226.48).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (1205.86, 245.28) (1206.98, 245.36).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (3124.88, 245.28) (3126.00, 245.36).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (1205.86, 626.28) (1206.98, 626.48).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (3124.88, 626.28) (3126.00, 626.48).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (1205.86, 1225.28) (1206.98, 1225.36).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (3124.88, 1225.28) (3126.00, 1225.36).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (203.21, 1346.28) (204.33, 1346.48).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (203.21, 1445.28) (204.33, 1445.30).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (203.21, 2365.28) (204.33, 2365.38).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (1205.86, 2385.28) (1206.98, 2385.43).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (3124.88, 2385.28) (3126.00, 2385.43).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (203.21, 2726.40) (204.33, 2726.48).
+**WARN: (IMPPP-531):	ViaGen Warning: SPACING rule violation, no via created on layer via4 at (1205.86, 2766.35) (1206.98, 2766.48).
+**WARN: (EMS-27):	Message (IMPPP-531) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (621.11, 47.51) (624.65, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (612.43, 47.51) (615.97, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (621.11, 47.51) (624.65, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (612.43, 47.51) (615.97, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (681.87, 47.51) (685.41, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (629.79, 47.51) (633.33, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (673.19, 47.51) (676.73, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (690.55, 47.51) (694.09, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (699.23, 47.51) (702.77, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (759.99, 47.51) (763.53, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (707.91, 47.51) (711.45, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (716.59, 47.51) (720.13, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (855.47, 47.51) (859.01, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (864.15, 47.51) (867.69, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (872.83, 47.51) (876.37, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (881.51, 47.51) (885.05, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (803.39, 47.51) (806.93, 48.63)
+**WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: metal4 & metal5 at (846.79, 47.51) (850.33, 48.63)
+**WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+addStripe created 376 wires.
+ViaGen created 17712 vias, deleted 30 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        1       |       NA       |
+|   via  |        6       |        0       |
+|  via2  |        6       |        0       |
+| metal3 |       30       |       NA       |
+|  via3  |       132      |        0       |
+|  via4  |      17568     |       30       |
+| metal5 |       345      |       NA       |
++--------+----------------+----------------+
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal4 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {VCC GND} -layer metal5 -direction horizontal -width 1.2 -spacing 0.28 -set_to_set_distance 20 -start_from bottom -start_offset 10 -stop_offset 10 -switch_layer_over_obs true -merge_stripes_value auto -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1564.7M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:01.0, peak mem: 1564.7M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Loading via instances (cpu: 0:00:00.1, real: 0:00:00.0, peak mem: 1564.7M)
+Starting stripe generation ...
+Auto merging with block rings is ON.
+Non-Default Mode Option Settings :
+  NONE
+The core ring for VCC is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for GND is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1564.7M)
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (628.79, 46.76) (629.99, 46.91).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (628.79, 46.76) (629.99, 46.91).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (688.79, 46.76) (689.99, 46.91).
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create the via on layer via3 at (701.890015, 47.509998) (702.770020, 47.959999).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (888.79, 46.76) (889.99, 46.91).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal4 at (888.79, 46.76) (889.99, 46.91).
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 45.880001) (3126.659912, 45.880001) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 65.879997) (3126.659912, 65.879997) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 85.879997) (3126.659912, 85.879997) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 105.879997) (3126.659912, 105.879997) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 125.879997) (3126.659912, 125.879997) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 145.880005) (3126.659912, 145.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 165.880005) (3126.659912, 165.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 185.880005) (3126.659912, 185.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 205.880005) (3126.659912, 205.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 225.880005) (3126.659912, 225.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 245.880005) (3126.659912, 245.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 265.880005) (3126.659912, 265.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 285.880005) (3126.659912, 285.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 305.880005) (3126.659912, 305.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 325.880005) (3126.659912, 325.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 345.880005) (3126.659912, 345.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 365.880005) (3126.659912, 365.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 385.880005) (3126.659912, 385.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 405.880005) (3126.659912, 405.880005) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (35.340000, 425.880005) (3126.659912, 425.880005) because same wire already exists.
+**WARN: (EMS-27):	Message (IMPPP-170) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Stripe generation is complete.
+<CMD> setSrouteMode -viaConnectToShape { ring stripe blockring blockpin }
+<CMD> sroute -connect { corePin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { VCC GND } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+*** Begin SPECIAL ROUTE on Fri Dec 23 00:12:37 2022 ***
+SPECIAL ROUTE ran on directory: /home/user2/Vsd22/Vsd22113/Desktop/HW4_4/build
+SPECIAL ROUTE ran on machine: vlsicad9 (Linux 3.10.0-957.21.3.el7.x86_64 Xeon 1.60Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VCC GND"
+routeSpecial set to true
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 6
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring coverpin noshape blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 6
+srouteTopTargetLayerLimit set to 6
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 2654.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 12 layers, 6 routing layers, 1 overlap layer
+Read in 398 macros, 179 used
+Read in 181 components
+  175 core components: 175 unplaced, 0 placed, 0 fixed
+  6 block/ring components: 0 unplaced, 0 placed, 6 fixed
+Read in 167 physical pins
+  167 physical pins: 0 unplaced, 167 placed, 0 fixed
+Read in 7 blockages
+Read in 167 nets
+Read in 2 special nets, 2 routed
+Read in 529 terminals
+2 nets selected.
+
+Begin power routing ...
+CPU time for FollowPin 4 seconds
+CPU time for FollowPin 4 seconds
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal3 at (206.82, 1280.39) (208.02, 1280.54).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal3 at (206.82, 1320.10) (208.02, 1320.23).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal3 at (206.82, 2842.79) (208.02, 2842.94).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal3 at (206.82, 2882.50) (208.02, 2882.63).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal3 at (666.82, 1270.42) (668.02, 1270.46).
+**WARN: (IMPPP-531):	ViaGen Warning: MINAREA rule violation, no via created on layer metal3 at (666.82, 2832.82) (668.02, 2832.86).
+  Number of Core ports routed: 2056
+  Number of Followpin connections: 1030
+End power routing: cpu: 0:00:10, real: 0:00:10, peak: 2654.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 167 io pins ...
+ Updating DB with 1 via definition ...
+
+sroute post-processing starts at Fri Dec 23 00:12:48 2022
+The viaGen is rebuilding shadow vias for net VCC.
+sroute post-processing ends at Fri Dec 23 00:12:48 2022
+sroute created 3315 wires.
+ViaGen created 100583 vias, deleted 120 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |      3087      |       NA       |
+|   via  |      35160     |       108      |
+| metal2 |        1       |       NA       |
+|  via2  |      32885     |       11       |
+| metal3 |       227      |       NA       |
+|  via3  |      32538     |        1       |
++--------+----------------+----------------+
+<CMD> getMultiCpuUsage -localCpu
+<CMD> get_verify_drc_mode -disable_rules -quiet
+<CMD> get_verify_drc_mode -quiet -area
+<CMD> get_verify_drc_mode -quiet -layer_range
+<CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+<CMD> get_verify_drc_mode -check_only -quiet
+<CMD> get_verify_drc_mode -check_same_via_cell -quiet
+<CMD> get_verify_drc_mode -exclude_pg_net -quiet
+<CMD> get_verify_drc_mode -ignore_trial_route -quiet
+<CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+<CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+<CMD> get_verify_drc_mode -limit -quiet
+<CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report top.drc.rpt -limit 1000
+<CMD> verify_drc
+#-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+#-report top.drc.rpt                     # string, default="", user setting
+ *** Starting Verify DRC (MEM: 1438.0) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+
+  Verification Complete : 19 Viols.
+
+ Violation Summary By Layer and Type:
+
+	         MetSpc    Short   Totals
+	metal1        1        1        2
+	metal5       17        0       17
+	Totals       18        1       19
+
+ *** End Verify DRC (CPU: 0:00:01.5  ELAPSED TIME: 2.00  MEM: 0.0M) ***
+
+<CMD> set_verify_drc_mode -area {0 0 0 0}
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Fri Dec 23 00:13:42 2022
+  Total CPU time:     0:09:17
+  Total real time:    0:25:22
+  Peak memory (main): 1234.57MB
+
+
+*** Memory Usage v#1 (Current mem = 1440.125M, initial mem = 268.250M) ***
+*** Message Summary: 1940 warning(s), 3 error(s)
+
+--- Ending "Innovus" (totcpu=0:09:16, real=0:25:20, mem=1440.1M) ---

@@ -1,0 +1,20 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/charlie/VSD/HW4_4/./sim/top_tb.sv
+-sdf_file
+/home/charlie/VSD/HW4_4/./syn/top_syn.sdf
++incdir+/home/charlie/VSD/HW4_4/./syn+/home/charlie/VSD/HW4_4/./include+/home/charlie/VSD/HW4_4/./sim
++define+SYN+prog0+FSDB
+-define
+CYCLE=12.5
+-define
+CYCLE2=100
+-define
+MAX=6000000
++access+r
++prog_path=/home/charlie/VSD/HW4_4/./sim/prog0
+-sdfstats
+sdfstats.log
++nc64bit

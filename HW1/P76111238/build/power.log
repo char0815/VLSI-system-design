@@ -1,0 +1,96 @@
+Loading db file '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.db'
+Loading db file '/home/charlie/P76111238/sim/SRAM/SRAM_WC.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : top
+Version: T-2022.03
+Date   : Mon Sep 19 10:27:51 2022
+****************************************
+
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.db)
+    SRAM_WC (File: /home/charlie/P76111238/sim/SRAM/SRAM_WC.db)
+
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+top                    enG1000K          fsa0m_a_generic_core_ss1p62v125c
+SRAM_wrapper_1         enG500K           fsa0m_a_generic_core_ss1p62v125c
+IF                     enG5K             fsa0m_a_generic_core_ss1p62v125c
+ID                     enG30K            fsa0m_a_generic_core_ss1p62v125c
+EXE                    enG10K            fsa0m_a_generic_core_ss1p62v125c
+MEM                    enG5K             fsa0m_a_generic_core_ss1p62v125c
+WB                     enG5K             fsa0m_a_generic_core_ss1p62v125c
+FORWARD                enG5K             fsa0m_a_generic_core_ss1p62v125c
+Branch                 enG5K             fsa0m_a_generic_core_ss1p62v125c
+Hazard                 enG5K             fsa0m_a_generic_core_ss1p62v125c
+ProgramCounter         enG5K             fsa0m_a_generic_core_ss1p62v125c
+IF_DW01_add_0_DW01_add_3
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ControlUnit            enG5K             fsa0m_a_generic_core_ss1p62v125c
+RegisterFile           enG30K            fsa0m_a_generic_core_ss1p62v125c
+ImmediateGenerator     enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU                    enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALUCtrl                enG5K             fsa0m_a_generic_core_ss1p62v125c
+csr                    enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_DW01_dec_0         enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_DW01_inc_0         enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_DW01_inc_1         enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_DW01_add_0         enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_DW01_add_1         enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_sub_0_DW01_sub_1
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_cmp6_0        enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_cmp2_0        enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_add_0_DW01_add_2
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+csr_DW01_sub_0         enG5K             fsa0m_a_generic_core_ss1p62v125c
+SRAM_wrapper_0         enG500K           fsa0m_a_generic_core_ss1p62v125c
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  32.1795 mW   (98%)
+  Net Switching Power  = 719.6461 uW    (2%)
+                         ---------
+Total Dynamic Power    =  32.8992 mW  (100%)
+
+Cell Leakage Power     =   1.2287 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory            28.8488        3.8078e-02        1.2171e+09           30.1040  (  88.21%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      3.0768            0.0000        1.7255e+03        2.0147e-03  (   0.01%)  i
+register       8.7678e-02            0.1343        5.2577e+06            3.3020  (   9.68%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.1663            0.5473        6.3400e+06            0.7200  (   2.11%)
+--------------------------------------------------------------------------------------------------
+Total             32.1795 mW         0.7197 mW     1.2287e+09 pW        34.1279 mW
+1

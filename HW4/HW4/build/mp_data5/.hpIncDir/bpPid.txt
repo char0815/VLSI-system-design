@@ -1,0 +1,7 @@
+0
+58 CPU_wrapper/L1CI/DA/i_data_array
+59 CPU_wrapper/L1CI/TA/i_tag_array
+60 CPU_wrapper/L1CD/DA/i_data_array
+61 CPU_wrapper/L1CD/TA/i_tag_array
+62 IM1/i_SRAM
+63 DM1/i_SRAM

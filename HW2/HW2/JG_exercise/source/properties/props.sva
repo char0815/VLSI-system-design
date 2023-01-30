@@ -1,0 +1,45 @@
+//================================================
+// Auther:      Tsai Zong-Hui (Claire)
+// Filename:    props.sv
+// Description: sva file
+// Version:     0.1
+//================================================
+module props(
+  input clk,
+  input rst,
+  input wr_en,
+  input [`ADDR_BITS-1:0] rd_addr,
+  input [`ADDR_BITS-1:0] wr_addr,
+  input [`REG_LENGTH-1:0] wr_data,  
+  input [`REG_LENGTH-1:0] rd_data
+);
+  /***** constraints *****/
+  reg [`ADDR_BITS-1:0] target_addr;  
+  reg [`REG_LENGTH-1:0] GOLDEN_data; 
+
+  always@(posedge clk or posedge rst) begin
+    if(rst)
+      GOLDEN_data <= `REG_LENGTH'b0;
+    else if(/* && */(wr_addr == target_addr))
+      GOLDEN_data <= wr_data; 
+  end   
+  
+  target_addr_stable_and_legal: assume property(
+    @(posedge clk) disable iff(rst)
+    ($stable(target_addr) /* && another target_addr constraints when write data into register */)
+  );// keep address same through out the whole simulation
+ 
+  /******** verify *******/
+  data_integrity_0: assert property(
+    @(posedge clk)disable iff(rst)
+    ((rd_addr == target_addr) |-> (rd_data == GOLDEN_data))
+  );   
+  data_integrity_1: assert property(
+    @(posedge clk)disable iff(rst)(
+    (rd_addr == `ADDR_BITS'b0) |-> (rd_data == `REG_LENGTH'b0))
+  );   
+
+endmodule
+
+  //bind props to regfile
+  bind regfile props props_i(.*);//connect all ports by name

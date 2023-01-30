@@ -1,0 +1,20 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INCDIR
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./pr
+-INCDIR
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./include
+-INCDIR
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./sim
+-DEFINE
+PR
+-DEFINE
+prog1
+-DEFINE
+CYCLE=12.5
+-DEFINE
+CYCLE2=100
+-DEFINE
+MAX=6000000

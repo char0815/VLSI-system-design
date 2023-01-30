@@ -1,0 +1,590 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri Dec 23 00:14:09 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v20.10-p004_1 (64bit) 05/07/2020 20:02 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 20.10-p004_1 NR200413-0234/20_10-UB (database version 18.20.505) {superthreading v1.69}
+#@(#)CDS: AAE 20.10-p005 (64bit) 05/07/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 20.10-p005_1 () Apr 14 2020 09:14:28 ( )
+#@(#)CDS: SYNTECH 20.10-b004_1 () Mar 12 2020 22:18:21 ( )
+#@(#)CDS: CPE v20.10-p006
+#@(#)CDS: IQuantus/TQuantus 19.1.3-s155 (64bit) Sun Nov 3 18:26:52 PST 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+set init_design_uniquify 1
+set init_no_new_assigns 1
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+set conf_qxconf_file NULL
+set conf_qxlib_file NULL
+set defHierChar /
+set distributed_client_message_echo 1
+set distributed_mmmc_disable_reports_auto_redirection 0
+set eco_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+set enc_enable_print_mode_command_reset_options 1
+set init_design_uniquify 1
+set init_gnd_net GND
+set init_lef_file {/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef  ../sim/SRAM/SRAM.lef ../sim/data_array/data_array.lef ../sim/tag_array/tag_array.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef}
+set init_mmmc_file ../script/MMMC.view
+set init_pwr_net VCC
+set init_remove_assigns 1
+set init_top_cell top
+set init_verilog ../syn/top_syn.v
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set latch_time_borrow_mode max_borrow
+set pegDefaultResScaleFactor 1
+set pegDetailResScaleFactor 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+set report_inactive_arcs_format {from to when arc_type sense reason}
+set soft_stack_size_limit 192
+set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+init_design
+saveIoFile -locations -temp ../pr/top.io
+loadIoFile ../pr/top.io
+zoomBox -901.98900 -433.54100 3564.21100 3564.66100
+remove_assigns
+setDesignMode -process 180
+clearGlobalNets
+globalNetConnect VCC -type pgpin -pin VCC -instanceBasename *
+globalNetConnect GND -type pgpin -pin GND -instanceBasename *
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site core_5040 -r 1 0.7 35 35 35 35
+uiSetTool select
+getIoFlowFlag
+fit
+::mp::clearAllSeed
+setPlanDesignMode -effort high -incremental false -boundaryPlace true -fixPlacedMacros false -noColorize false
+planDesign
+uiSetTool move
+selectInst CPU_wrapper/L1CI/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 896.284 2390.327 1288.124 2547.127
+deselectAll
+selectInst CPU_wrapper/L1CD/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 735.567 2691.721 1127.407 2848.521
+deselectAll
+selectInst IM1/i_SRAM
+setObjFPlanBox Instance IM1/i_SRAM 1195.67 1723.153 3115.81 3114.753
+deselectAll
+selectInst DM1/i_SRAM
+setObjFPlanBox Instance DM1/i_SRAM 1192.93 45.336 3113.07 1436.936
+deselectAll
+selectInst CPU_wrapper/L1CD/DA/i_data_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 683.319 1256.993 840.119 3144.893
+deselectAll
+selectInst CPU_wrapper/L1CD/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 72.502 345.863 464.342 502.663
+deselectAll
+selectInst CPU_wrapper/L1CD/DA/i_data_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 688.343 1236.897 845.143 3124.797
+deselectAll
+selectInst CPU_wrapper/L1CI/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 569.769 39.449 961.609 196.249
+deselectAll
+selectInst CPU_wrapper/L1CD/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 47.384 39.442 439.224 196.242
+deselectAll
+selectInst CPU_wrapper/L1CI/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 620.003 39.45 1011.843 196.25
+uiSetTool select
+::mp::clearAllSeed
+setPlanDesignMode -effort high -incremental true -boundaryPlace true -fixPlacedMacros false -noColorize false
+planDesign
+selectInst CPU_wrapper/L1CI/DA/i_data_array
+uiSetTool copy
+zoomBox 454.97500 361.14900 3260.42200 2872.62300
+zoomBox 809.37600 603.40400 3194.00600 2738.15700
+zoomBox 1859.26400 1159.31400 3104.05700 2273.66900
+zoomBox 2628.96000 1354.38000 3528.32300 2159.50200
+zoomBox 1885.30200 694.20800 6245.97700 2881.10100
+zoomBox 1373.67900 259.12700 7409.21500 3285.96800
+zoomBox 547.92900 -13.33500 8901.61300 4176.06500
+zoomBox -1184.87000 -761.37500 12417.71000 6060.36400
+zoomBox -557.90900 -427.65000 11004.28600 5370.82900
+uiSetTool move
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 1148.691 1409.319 3036.591 1566.119
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 1044.401 1444.083 2932.301 1600.883
+uiSetTool select
+deselectAll
+selectInst CPU_wrapper/L1CI/DA/i_data_array
+flipOrRotateObject -flip MY -group
+flipOrRotateObject -rotate R270 -group
+deselectAll
+selectInst CPU_wrapper/L1CI/DA/i_data_array
+deselectAll
+selectInst IM1/i_SRAM
+deselectAll
+selectInst CPU_wrapper/L1CI/DA/i_data_array
+flipOrRotateObject -rotate R270 -group
+flipOrRotateObject -rotate R270 -group
+deselectAll
+selectInst CPU_wrapper/L1CI/DA/i_data_array
+uiSetTool move
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2970.274 1200.738 3127.074 3088.638
+deselectAll
+selectInst IM1/i_SRAM
+setObjFPlanBox Instance IM1/i_SRAM 111.063 1695.34 2031.203 3086.94
+deselectAll
+selectInst CPU_wrapper/L1CD/DA/i_data_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2308.299 1264.711 2465.099 3152.611
+deselectAll
+selectInst CPU_wrapper/L1CD/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 2717.183 67.251 3109.023 224.051
+deselectAll
+selectInst CPU_wrapper/L1CI/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 2156.527 74.214 2548.367 231.014
+deselectAll
+selectInst DM1/i_SRAM
+setObjFPlanBox Instance DM1/i_SRAM 38.796 38.387 1958.936 1429.987
+zoomBox -254.55000 596.44100 6846.08300 4157.43200
+zoomBox 89.50600 1357.31200 3796.08000 3216.17100
+zoomBox -616.13700 2575.45200 1318.71800 3545.78800
+zoomBox -616.13700 2769.52000 1318.71800 3739.85600
+zoomBox -616.13700 2575.45200 1318.71800 3545.78800
+zoomBox -1003.10900 2575.45200 931.74600 3545.78800
+zoomBox -809.62300 2575.45200 1125.23200 3545.78800
+zoomBox -616.13700 2575.45200 1318.71800 3545.78800
+zoomBox -238.62600 2851.64400 619.88100 3282.18800
+zoomBox -71.64400 2988.95600 309.28300 3179.99200
+zoomBox -5.27300 3061.80500 163.74700 3146.56900
+deselectAll
+selectInst IM1/i_SRAM
+setObjFPlanBox Instance IM1/i_SRAM 46.42 1728.473 1966.56 3120.073
+zoomBox 24.50600 3095.61300 99.50300 3133.22400
+zoomBox 31.33700 3109.68700 70.48700 3129.32100
+setObjFPlanBox Instance IM1/i_SRAM 41.452 1729.482 1961.592 3121.082
+zoomBox 32.07000 3114.99200 56.11400 3127.05000
+zoomBox 33.00500 3120.00700 43.67600 3125.35900
+setObjFPlanBox Instance IM1/i_SRAM 42.335 1729.063 1962.475 3120.663
+setObjFPlanBox Instance IM1/i_SRAM 35.63 1732.635 1955.77 3124.235
+zoomBox 34.02400 3122.15700 39.59700 3124.95200
+zoomBox 34.42800 3122.83800 38.45600 3124.85800
+zoomBox 34.84800 3123.56000 37.32300 3124.80100
+zoomBox 34.84800 3123.68400 37.32300 3124.92500
+zoomBox 34.94300 3123.83700 37.04700 3124.89200
+zoomBox 35.02100 3123.97100 36.81000 3124.86800
+setObjFPlanBox Instance IM1/i_SRAM 35.412 1733.164 1955.552 3124.764
+zoomBox 35.16200 3124.35500 36.09800 3124.82400
+zoomBox 35.16200 3124.40200 36.09800 3124.87100
+zoomBox 35.16200 3124.49600 36.09800 3124.96500
+zoomBox 35.24200 3124.65400 35.73300 3124.90000
+setObjFPlanBox Instance IM1/i_SRAM 35.367 1733.197 1955.507 3124.797
+zoomBox 35.28200 3124.70900 35.58500 3124.86100
+zoomBox 35.30300 3124.75000 35.46200 3124.83000
+setObjFPlanBox Instance IM1/i_SRAM 35.352 1733.2 1955.492 3124.8
+setObjFPlanBox Instance IM1/i_SRAM 35.346 1733.2 1955.486 3124.8
+setObjFPlanBox Instance IM1/i_SRAM 35.341 1733.201 1955.481 3124.801
+zoomBox 35.26400 3124.72200 35.57000 3124.87500
+zoomBox 35.25200 3124.70900 35.61200 3124.89000
+zoomBox 35.22600 3124.63500 35.81400 3124.93000
+zoomBox 35.19700 3124.56300 36.01300 3124.97200
+zoomBox 34.65100 3124.13200 37.19900 3125.41000
+zoomBox 33.28700 3123.01400 40.04600 3126.40400
+zoomBox 31.42600 3121.96000 42.43500 3127.48100
+zoomBox 27.05400 3119.52000 48.14300 3130.09600
+zoomBox 16.43900 3110.13500 72.36300 3138.18100
+zoomBox -19.18300 3078.80700 155.27100 3166.29600
+zoomBox -130.13000 2981.20000 414.06500 3254.11600
+zoomBox -566.09700 2597.65400 1431.02700 3599.21800
+zoomBox -4350.31900 1827.48700 2978.83600 5503.08200
+setObjFPlanBox Instance IM1/i_SRAM -2926.291 3117.057 -1006.151 4508.657
+viewLast
+viewLast
+undo
+zoomBox -6976.69800 1560.35600 3167.46100 6647.68500
+uiSetTool select
+zoomBox -623.65200 1468.13800 4671.66500 4123.75700
+zoomBox 1514.23100 2161.60900 3511.36000 3163.17600
+zoomBox 1977.96000 2931.77400 2731.17900 3309.51600
+zoomBox 2189.97800 3019.13800 2474.05500 3161.60400
+uiSetTool move
+deselectAll
+selectInst CPU_wrapper/L1CD/DA/i_data_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.617 1236.012 2464.417 3123.912
+zoomBox 2276.47200 3067.15000 2424.76300 3141.51800
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.174 1237.08 2463.974 3124.98
+zoomBox 2306.86100 3092.34000 2384.27000 3131.16100
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.31 1236.289 2464.11 3124.189
+zoomBox 2319.50500 3102.88300 2367.04400 3126.72400
+zoomBox 2319.50500 3105.26700 2367.04400 3129.10800
+zoomBox 2319.50500 3107.65100 2367.04400 3131.49200
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.224 1236.776 2464.024 3124.676
+zoomBox 2319.50500 3110.03500 2367.04400 3133.87600
+zoomBox 2319.50500 3112.41900 2367.04400 3136.26000
+zoomBox 2331.50000 3118.32000 2356.31900 3130.76700
+zoomBox 2337.77200 3121.40200 2350.72800 3127.89900
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.157 1236.819 2463.957 3124.719
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.168 1236.859 2463.968 3124.759
+zoomBox 2341.01300 3122.91300 2347.77900 3126.30600
+zoomBox 2342.98300 3123.83100 2345.98800 3125.33800
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.163 1236.887 2463.963 3124.787
+zoomBox 2343.58600 3124.13400 2345.43200 3125.06000
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.16 1236.894 2463.96 3124.794
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.16 1236.895 2463.96 3124.795
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.163 1236.898 2463.963 3124.798
+zoomBox 2344.03100 3124.40700 2344.99500 3124.89000
+zoomBox 2344.26200 3124.54800 2344.76600 3124.80100
+zoomBox 2344.26200 3124.59800 2344.76600 3124.85100
+zoomBox 2344.26200 3124.62300 2344.76600 3124.87600
+setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 2307.16 1236.897 2463.96 3124.797
+zoomBox 2343.96700 3124.46300 2345.10600 3125.03400
+zoomBox 2343.09200 3123.98700 2346.11700 3125.50400
+zoomBox 2340.96600 3123.14100 2347.78500 3126.56100
+zoomBox 2336.02700 3121.14000 2351.40100 3128.85000
+zoomBox 2315.52500 3114.72300 2363.48700 3138.77600
+zoomBox 2250.54300 3106.23700 2377.71700 3170.01500
+zoomBox 2038.32600 3075.14400 2435.03500 3274.09500
+zoomBox 1760.90900 3031.01800 2520.88000 3412.14600
+deselectAll
+selectInst CPU_wrapper/L1CI/DA/i_data_array
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2967.071 1233.643 3123.871 3121.543
+zoomBox 2937.91100 2964.88700 3275.11500 3133.99600
+zoomBox 3013.66300 3029.83600 3189.68600 3118.11200
+zoomBox 3013.66300 3073.97600 3189.68600 3162.25200
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2968.763 1236.18 3125.563 3124.08
+zoomBox 3086.43800 3094.81900 3164.54300 3133.98900
+zoomBox 3114.99300 3104.64200 3149.65100 3122.02300
+zoomBox 3114.99300 3106.38000 3149.65100 3123.76100
+zoomBox 3114.99300 3111.59400 3149.65100 3128.97500
+zoomBox 3111.52700 3111.59400 3146.18500 3128.97500
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2969.656 1236.701 3126.456 3124.601
+zoomBox 3113.14900 3113.16900 3142.60900 3127.94300
+zoomBox 3117.54200 3117.43500 3132.92200 3125.14800
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2969.762 1236.876 3126.562 3124.776
+zoomBox 3119.62000 3118.91100 3130.73300 3124.48400
+zoomBox 3119.62000 3120.58200 3130.73300 3126.15500
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2969.834 1236.88 3126.634 3124.78
+zoomBox 3123.06100 3122.31700 3127.99200 3124.79000
+zoomBox 3123.06100 3122.56400 3127.99200 3125.03700
+zoomBox 3123.06100 3122.81100 3127.99200 3125.28400
+zoomBox 3123.06100 3123.05800 3127.99200 3125.53100
+zoomBox 3122.56800 3123.05800 3127.49900 3125.53100
+zoomBox 3123.06100 3123.05800 3127.99200 3125.53100
+zoomBox 3123.55400 3123.05800 3128.48500 3125.53100
+zoomBox 3124.54000 3123.05800 3129.47100 3125.53100
+zoomBox 3125.54600 3123.75800 3128.12100 3125.04900
+zoomBox 3126.15600 3124.18300 3127.30100 3124.75700
+zoomBox 3126.38800 3124.34500 3126.98600 3124.64500
+zoomBox 3126.38800 3124.37500 3126.98600 3124.67500
+zoomBox 3126.38800 3124.40500 3126.98600 3124.70500
+zoomBox 3126.38800 3124.49500 3126.98600 3124.79500
+zoomBox 3126.38800 3124.55500 3126.98600 3124.85500
+zoomBox 3126.38800 3124.61500 3126.98600 3124.91500
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2969.851 1236.889 3126.651 3124.789
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2969.856 1236.894 3126.656 3124.794
+zoomBox 3126.51800 3124.67800 3126.88600 3124.86300
+setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 2969.86 1236.896 3126.66 3124.796
+zoomBox 3126.51700 3124.60200 3126.88600 3124.78700
+zoomBox 3126.51700 3124.48800 3126.88600 3124.67300
+zoomBox 3126.70200 3124.48800 3127.07100 3124.67300
+zoomBox 3126.38800 3124.32100 3127.37100 3124.81400
+zoomBox 3125.32400 3123.75300 3128.39500 3125.29300
+zoomBox 3122.02100 3121.98400 3131.60300 3126.78900
+zoomBox 3114.00500 3118.00500 3139.41200 3130.74700
+zoomBox 3092.87000 3107.38600 3160.24200 3141.17300
+uiSetTool select
+zoomBox 2971.96700 3096.64700 3182.13300 3202.04600
+zoomBox 2791.07700 3071.61200 3264.74000 3309.15600
+zoomBox 2097.97200 2971.26300 3575.51800 3712.25700
+zoomBox 1916.09400 2943.19700 3654.38400 3814.95500
+zoomBox -466.00200 1096.61100 4143.02400 3408.05300
+zoomBox -1678.94700 820.10200 4700.32900 4019.33000
+zoomBox -2234.03900 647.48200 5270.99100 4411.27900
+zoomBox -719.24100 48.39800 3198.43200 2013.12400
+zoomBox -398.42500 -244.41000 1079.12500 496.58600
+zoomBox 41.55300 -64.34300 812.84400 322.46200
+uiSetTool move
+deselectAll
+selectInst DM1/i_SRAM
+setObjFPlanBox Instance DM1/i_SRAM 42.974 42.564 1963.114 1434.164
+zoomBox -112.70500 -64.34300 658.58600 322.46200
+zoomBox -189.83400 -64.34300 581.45700 322.46200
+zoomBox -100.71100 -25.15000 372.96100 212.39800
+zoomBox -12.36500 13.70100 166.28100 103.29300
+zoomBox 17.39500 26.78900 96.66100 66.54100
+zoomBox 30.59800 32.59400 65.77200 50.23400
+setObjFPlanBox Instance DM1/i_SRAM 35.906 35.664 1956.046 1427.264
+zoomBox 36.27600 35.92600 49.54400 42.58000
+zoomBox 36.27600 37.92100 49.54400 44.57500
+zoomBox 36.27600 39.91600 49.54400 46.57000
+zoomBox 36.27600 35.92600 49.54400 42.58000
+zoomBox 36.27600 33.93100 49.54400 40.58500
+zoomBox 36.27600 32.60100 49.54400 39.25500
+zoomBox 32.29500 32.60100 45.56300 39.25500
+setObjFPlanBox Instance DM1/i_SRAM 35.399 35.357 1955.539 1426.957
+zoomBox 34.20900 34.34800 41.13600 37.82200
+zoomBox 35.03900 35.09900 38.65600 36.91300
+zoomBox 35.03900 34.91800 38.65600 36.73200
+zoomBox 34.67700 34.91800 38.29400 36.73200
+zoomBox 34.31500 34.91800 37.93200 36.73200
+zoomBox 33.95300 34.91800 37.57000 36.73200
+zoomBox 34.64600 35.17800 36.86800 36.29200
+setObjFPlanBox Instance DM1/i_SRAM 35.348 35.289 1955.488 1426.889
+zoomBox 35.29300 35.39100 36.13200 35.81200
+zoomBox 35.29300 35.26500 36.13200 35.68600
+zoomBox 35.29300 35.18100 36.13200 35.60200
+zoomBox 35.40500 35.27500 35.77800 35.46200
+zoomBox 35.29400 35.27500 35.66700 35.46200
+setObjFPlanBox Instance DM1/i_SRAM 35.341 35.282 1955.481 1426.882
+zoomBox 35.19600 35.24100 35.80300 35.54500
+zoomBox 34.77500 35.09400 36.38700 35.90200
+zoomBox 34.15700 34.87700 37.24700 36.42700
+uiSetTool select
+zoomBox 32.27400 33.78500 39.24500 37.28100
+zoomBox 26.29700 30.80900 44.78300 40.08000
+zoomBox 1328.68100 944.14100 1377.70100 968.72500
+zoomBox 1241.58900 931.20700 1394.50800 1007.89600
+zoomBox 969.48900 889.77900 1446.50000 1129.00200
+zoomBox -360.51600 682.98700 1698.97400 1715.82800
+zoomBox -3219.22400 234.86700 2241.44600 2973.41100
+zoomBox -10914.18600 -844.27300 3564.61000 6416.89100
+zoomBox -1251.29700 -1671.80800 6306.72700 2118.56600
+zoomBox 948.28200 -723.71300 4301.81900 958.09700
+zoomBox 1904.05500 -286.21200 3392.03900 460.01700
+deselectAll
+selectInst CPU_wrapper/L1CI/TA/i_tag_array
+flipOrRotateObject -rotate R270 -group
+flipOrRotateObject -rotate R270 -group
+flipOrRotateObject -rotate R270 -group
+deselectAll
+selectInst CPU_wrapper/L1CD/TA/i_tag_array
+flipOrRotateObject -rotate R270 -group
+uiSetTool move
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 2965.028 38.617 3121.828 430.457
+deselectAll
+selectInst CPU_wrapper/L1CI/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 2270.164 36.63 2426.964 428.47
+uiSetTool select
+zoomBox 2097.95900 -123.60800 2874.70000 265.93000
+zoomBox 2163.50400 -73.32100 2568.97000 130.02200
+zoomBox 2304.95800 12.45100 2434.94400 77.63900
+zoomBox 2304.95800 5.93200 2434.94400 71.12000
+zoomBox 2336.30400 19.49400 2404.15800 53.52300
+zoomBox 2355.11400 28.34300 2385.22200 43.44200
+uiSetTool move
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 2270.052 35.398 2426.852 427.238
+zoomBox 2359.47600 32.14000 2375.19500 40.02300
+zoomBox 2362.44100 34.72300 2368.37200 37.69700
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 2270.061 35.314 2426.861 427.154
+zoomBox 2363.72300 35.43900 2365.62400 36.39200
+zoomBox 2363.72300 35.34400 2365.62400 36.29700
+zoomBox 2363.72300 35.05900 2365.62400 36.01200
+zoomBox 2363.72300 34.86900 2365.62400 35.82200
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 2270.063 35.287 2426.863 427.127
+zoomBox 2363.83300 34.94000 2365.44900 35.75000
+zoomBox 2364.13200 35.13200 2364.97600 35.55500
+zoomBox 2364.31300 35.24800 2364.68800 35.43600
+zoomBox 2364.39200 35.29900 2364.56100 35.38400
+zoomBox 2364.39200 35.29000 2364.56100 35.37500
+zoomBox 2364.39200 35.28100 2364.56100 35.36600
+zoomBox 2364.39200 35.26300 2364.56100 35.34800
+setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 2270.059 35.283 2426.859 427.123
+zoomBox 2364.36600 35.25000 2364.60100 35.36800
+zoomBox 2364.32900 35.23200 2364.65600 35.39600
+zoomBox 2363.81300 34.97400 2365.47600 35.80800
+zoomBox 2363.00600 34.57000 2366.76100 36.45300
+zoomBox 2358.20900 32.15600 2374.42600 40.28900
+zoomBox 2337.51900 21.73700 2407.54400 56.85500
+zoomBox 2303.72900 4.73600 2461.55200 83.88500
+zoomBox 2265.56500 -14.46500 2522.55500 114.41600
+uiSetTool select
+zoomBox 2091.60400 -135.80000 2773.01100 205.92800
+zoomBox 1212.77500 -428.45400 3338.34200 637.52500
+zoomBox 1212.77500 -535.05200 3338.34200 530.92700
+zoomBox 575.10400 -535.05200 2700.67100 530.92700
+zoomBox 1212.77500 -535.05200 3338.34200 530.92700
+zoomBox 149.99000 -535.05200 2275.55700 530.92700
+zoomBox 1850.44600 -535.05200 3976.01300 530.92700
+zoomBox 2063.00300 -535.05200 4188.57000 530.92700
+zoomBox 2426.55600 -355.22600 3962.28100 414.94500
+zoomBox 2833.02200 -134.52200 3634.68200 267.51300
+zoomBox 3134.01000 29.23700 3391.00600 158.12100
+zoomBox 3185.41000 29.23700 3442.40600 158.12100
+zoomBox 3313.91000 29.23700 3570.90600 158.12100
+zoomBox 3159.71000 29.23700 3416.70600 158.12100
+zoomBox 3005.51000 29.23700 3262.50600 158.12100
+zoomBox 2851.31000 29.23700 3108.30600 158.12100
+zoomBox 2877.01000 29.23700 3134.00600 158.12100
+zoomBox 2902.71000 29.23700 3159.70600 158.12100
+zoomBox 2928.41000 29.23700 3185.40600 158.12100
+zoomBox 2954.11000 29.23700 3211.10600 158.12100
+zoomBox 2979.81000 29.23700 3236.80600 158.12100
+zoomBox 2979.81000 16.34900 3236.80600 145.23300
+zoomBox 2979.81000 3.46100 3236.80600 132.34500
+zoomBox 2979.81000 -9.42700 3236.80600 119.45700
+zoomBox 2979.81000 -22.31500 3236.80600 106.56900
+zoomBox 3034.91500 9.96400 3169.06900 77.24300
+zoomBox 3048.33000 9.96400 3182.48500 77.24300
+zoomBox 3061.74600 9.96400 3195.90100 77.24300
+zoomBox 3061.74600 3.23600 3195.90100 70.51500
+zoomBox 3039.87100 -11.24800 3225.55300 81.87200
+zoomBox 3077.51200 13.67400 3174.44100 62.28400
+zoomBox 3103.19900 30.97200 3139.75700 49.30600
+zoomBox 3105.53600 32.54500 3136.61100 48.12900
+zoomBox 3109.21200 35.01800 3131.66400 46.27800
+zoomBox 3107.52200 33.93900 3133.93700 47.18600
+zoomBox 3110.64700 35.93500 3129.73200 45.50600
+zoomBox 3110.64700 34.97800 3129.73200 44.54900
+zoomBox 3110.64700 34.02100 3129.73200 43.59200
+zoomBox 3110.64700 33.06400 3129.73200 42.63500
+uiSetTool move
+deselectAll
+selectInst CPU_wrapper/L1CD/TA/i_tag_array
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 2969.598 35.728 3126.398 427.568
+zoomBox 3112.55600 33.06400 3131.64100 42.63500
+zoomBox 3114.46500 33.06400 3133.55000 42.63500
+zoomBox 3116.37400 33.06400 3135.45900 42.63500
+zoomBox 3120.43300 35.00000 3130.39700 39.99700
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 2969.738 35.376 3126.538 427.216
+zoomBox 3121.50100 35.18100 3129.97200 39.42900
+zoomBox 3121.50100 34.75600 3129.97200 39.00400
+zoomBox 3121.50100 34.33100 3129.97200 38.57900
+zoomBox 3123.59200 35.11400 3128.01500 37.33200
+zoomBox 3123.11000 34.97500 3128.31400 37.58500
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 2969.834 35.308 3126.634 427.148
+zoomBox 3124.63100 35.20900 3127.82900 36.81300
+zoomBox 3126.26500 35.47400 3127.29100 35.98900
+zoomBox 3126.21300 35.43800 3127.42100 36.04400
+zoomBox 3126.15200 35.39600 3127.57400 36.10900
+zoomBox 3126.34300 35.52900 3127.08700 35.90200
+zoomBox 3126.34300 35.45500 3127.08700 35.82800
+zoomBox 3126.34300 35.34400 3127.08700 35.71700
+zoomBox 3126.34300 35.15900 3127.08700 35.53200
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 2969.849 35.289 3126.649 427.129
+setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 2969.856 35.284 3126.656 427.124
+uiSetTool select
+zoomBox 3126.13500 34.87400 3127.81500 35.71700
+zoomBox 3125.50600 34.02500 3129.96800 36.26300
+zoomBox 3124.18400 32.24800 3134.24400 37.29300
+zoomBox 3122.04800 29.35100 3141.32200 39.01700
+zoomBox 3114.65800 19.25400 3165.76600 44.88500
+zoomBox 3103.90800 4.50900 3201.81400 53.60900
+zoomBox 3069.44900 -23.09800 3290.10700 87.56300
+zoomBox 2905.32900 -165.18600 3715.12200 240.92800
+zoomBox 2427.19300 -585.29100 4953.24400 681.53200
+zoomBox 927.42100 -1910.43500 8807.12700 2041.26400
+zoomBox -1834.94700 -4375.77300 15923.93100 4530.36300
+zoomBox -372.12200 -276.18200 7507.58900 3675.51900
+zoomBox 2045.55200 1481.54200 4571.60800 2748.36700
+zoomBox 525.33600 492.22200 6218.43100 3347.32800
+zoomBox -1889.58300 -1091.76200 9016.60300 4377.72600
+zoomBox -1132.11800 -588.09700 8138.14000 4060.96800
+zoomBox -488.27400 -159.98200 7391.44700 3791.72400
+zoomBox 919.57400 776.14500 5758.70900 3202.98700
+zoomBox -1132.12200 -588.09900 8138.14200 4060.96900
+zoomBox -1889.58800 -1091.76500 9016.60500 4377.72700
+setDrawView place
+zoomBox -2712.44300 -1626.44700 10118.37400 4808.25000
+addHaloToBlock {15 15 15 15} -allBlock
+redraw
+addRoutingHalo -allBlocks -space 5 -bottom metal1 -top metal6
+redraw
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 3 -use_interleaving_wire_group 1
+deselectAll
+selectInst IM1/i_SRAM
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {rt bl } -skip_side {top left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {rt bl } -skip_side {top left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+deselectAll
+selectInst CPU_wrapper/L1CD/DA/i_data_array
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lt rt } -skip_side {top } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lt rt } -skip_side {top } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+deselectAll
+selectInst CPU_wrapper/L1CI/DA/i_data_array
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lt br } -skip_side {top right } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lt br } -skip_side {top right } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+deselectAll
+selectInst CPU_wrapper/L1CD/TA/i_tag_array
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lb tr } -skip_side {bottom right } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lb tr } -skip_side {bottom right } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+deselectAll
+selectInst CPU_wrapper/L1CI/TA/i_tag_array
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lb rb } -skip_side {bottom } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {lb rb } -skip_side {bottom } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+deselectAll
+selectInst DM1/i_SRAM
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {tl rb } -skip_side {bottom left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around selected -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 3 bottom 3 left 3 right 3} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {tl rb } -skip_side {bottom left } -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { ring blockring blockpin }
+sroute -connect { blockPin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal6(6) }
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal4 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {GND VCC} -layer metal4 -direction vertical -width 1.2 -spacing 0.28 -set_to_set_distance 20 -start_from left -start_offset 10 -stop_offset 10 -switch_layer_over_obs true -merge_stripes_value auto -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal4 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {GND VCC} -layer metal5 -direction horizontal -width 1.2 -spacing 0.28 -set_to_set_distance 20 -start_from bottom -start_offset 10 -stop_offset 10 -switch_layer_over_obs true -merge_stripes_value auto -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal5 -stacked_via_bottom_layer metal4 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {GND VCC} -layer metal5 -direction horizontal -width 1.2 -spacing 0.28 -set_to_set_distance 20 -start_from bottom -start_offset 10 -stop_offset 10 -switch_layer_over_obs true -merge_stripes_value auto -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { ring stripe blockring blockpin }
+sroute -connect { corePin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report top.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+verifyConnectivity -net {VCC GND} -type special -noAntenna -error 1000 -warning 50
+place_opt_design
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+optDesign -preCTS

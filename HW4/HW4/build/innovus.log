@@ -1,0 +1,618 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.10-p004_1, built Thu May 7 20:02:41 PDT 2020
+Options:	
+Date:		Thu Dec 22 22:10:22 2022
+Host:		vlsicad9 (x86_64 w/Linux 3.10.0-957.21.3.el7.x86_64) (4cores*16cpus*Intel(R) Xeon(R) CPU E5520 @ 2.27GHz 8192KB)
+OS:		CentOS Linux release 7.6.1810 (Core) 
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (47 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> set init_design_uniquify 1
+<CMD> set init_no_new_assigns 1
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set defHierChar /
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set eco_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set init_design_uniquify 1
+<CMD> set init_gnd_net GND
+<CMD> set init_lef_file {/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef  ../sim/SRAM/SRAM.lef ../sim/data_array/data_array.lef ../sim/tag_array/tag_array.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef}
+<CMD> set init_mmmc_file ../script/MMMC.view
+<CMD> set init_pwr_net VCC
+<CMD> set init_remove_assigns 1
+<CMD> set init_top_cell top
+<CMD> set init_verilog ../syn/top_syn.v
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> get_message -id GLOBAL-100 -suppress
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set soft_stack_size_limit 192
+<CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> init_design
+#% Begin Load MMMC data ... (date=12/22 22:15:17, mem=519.0M)
+#% End Load MMMC data ... (date=12/22 22:15:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=519.2M, current mem=519.2M)
+RC
+
+Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef ...
+WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+Without DIVIDECHAR defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef at line 1290.
+
+Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 1.
+Set DBUPerIGU to M2 pitch 620.
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 40071.
+
+Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 1.
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 2034.
+
+Loading LEF file ../sim/SRAM/SRAM.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/SRAM/SRAM.lef at line 37.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9157.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9171.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9185.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9199.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9213.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9227.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9241.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9255.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9269.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9283.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9297.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9311.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9325.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9339.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9353.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9367.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9381.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9395.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9409.
+**ERROR: (IMPLF-40):	Macro 'SRAM' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+
+Loading LEF file ../sim/data_array/data_array.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/data_array/data_array.lef at line 37.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4117.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4131.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4145.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4159.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4173.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4187.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4201.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4215.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4229.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4243.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4257.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4271.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4285.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4299.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4313.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4327.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4341.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4355.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4369.
+**ERROR: (IMPLF-40):	Macro 'data_array' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+
+Loading LEF file ../sim/tag_array/tag_array.lef ...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/tag_array/tag_array.lef at line 37.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1327.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1341.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1355.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1369.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1383.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1397.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1411.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1425.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1439.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1453.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1467.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1481.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1495.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1509.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1523.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1537.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1551.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1565.
+WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1579.
+**ERROR: (IMPLF-40):	Macro 'tag_array' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+
+Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef ...
+**WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-119' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3B2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'AN3T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+Without BUSBITCHARS defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+Without DIVIDECHAR defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+**WARN: (IMPLF-61):	382 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-61' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+viaInitial starts at Thu Dec 22 22:15:18 2022
+viaInitial ends at Thu Dec 22 22:15:18 2022
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from ../script/MMMC.view
+Reading lib_max timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib)
+Read 382 cells in library 'fsa0m_a_generic_core_ss1p62v125c' 
+Reading lib_max timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ss1p62v125c.lib' ...
+Read 6 cells in library 'fsa0m_a_t33_generic_io_ss1p62v125c' 
+Reading lib_max timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/SRAM/SRAM_WC.lib' ...
+Read 1 cells in library 'SRAM_WC' 
+Reading lib_max timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/data_array/data_array_WC.lib' ...
+Read 1 cells in library 'data_array_WC' 
+Reading lib_max timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/tag_array/tag_array_WC.lib' ...
+Read 1 cells in library 'tag_array_WC' 
+Reading lib_min timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib)
+Read 382 cells in library 'fsa0m_a_generic_core_ff1p98vm40c' 
+Reading lib_min timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ff1p98vm40c.lib' ...
+Read 6 cells in library 'fsa0m_a_t33_generic_io_ff1p98vm40c' 
+Reading lib_min timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/SRAM/SRAM_BC.lib' ...
+Read 1 cells in library 'SRAM_BC' 
+Reading lib_min timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/data_array/data_array_BC.lib' ...
+Read 1 cells in library 'data_array_BC' 
+Reading lib_min timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/tag_array/tag_array_BC.lib' ...
+Read 1 cells in library 'tag_array_BC' 
+*** End library_loading (cpu=0.07min, real=0.07min, mem=26.9M, fe_cpu=1.30min, fe_real=5.00min, fe_mem=819.5M) ***
+#% Begin Load netlist data ... (date=12/22 22:15:22, mem=547.2M)
+*** Begin netlist parsing (mem=819.5M) ***
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4T' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4T' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4S' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4S' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4P' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4P' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3T' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3T' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3S' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3S' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3P' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3P' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Created 391 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../syn/top_syn.v'
+
+*** Memory Usage v#1 (Current mem = 827.539M, initial mem = 268.254M) ***
+*** End netlist parsing (cpu=0:00:00.4, real=0:00:00.0, mem=827.5M) ***
+#% End Load netlist data ... (date=12/22 22:15:22, total cpu=0:00:00.4, real=0:00:00.0, peak res=568.9M, current mem=568.9M)
+Set top cell to top.
+Hooked 782 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell top ...
+*** Netlist is unique.
+** info: there are 876 modules.
+** info: there are 23739 stdCell insts.
+** info: there are 6 macros.
+
+*** Memory Usage v#1 (Current mem = 886.465M, initial mem = 268.254M) ***
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Reading Capacitance Table File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl ...
+Cap table was created using Encounter 13.13-s017_1.
+Process name: MIXED_MODE_RFCMOS18_1P6M_MMC_TOP_METAL20_6K.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: AV_max
+    RC-Corner Name        : RC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: AV_typ
+    RC-Corner Name        : RC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: AV_min
+    RC-Corner Name        : RC
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading lib_typ timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_tt1p8v25c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_tt1p8v25c.lib)
+Read 382 cells in library 'fsa0m_a_generic_core_tt1p8v25c' 
+Reading lib_typ timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_tt1p8v25c.lib' ...
+Read 6 cells in library 'fsa0m_a_t33_generic_io_tt1p8v25c' 
+Reading lib_typ timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/SRAM/SRAM_TC.lib' ...
+Read 1 cells in library 'SRAM_TC' 
+Reading lib_typ timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/data_array/data_array_TC.lib' ...
+Read 1 cells in library 'data_array_TC' 
+Reading lib_typ timing library '/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/sim/tag_array/tag_array_TC.lib' ...
+Read 1 cells in library 'tag_array_TC' 
+Reading timing constraints file '../script/APR.sdc' ...
+Current (total cpu=0:01:22, real=0:05:04, peak res=817.8M, current mem=817.8M)
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../script/APR.sdc, Line 18).
+
+INFO (CTE): Reading of timing constraints file ../script/APR.sdc completed, with 1 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=836.2M, current mem=836.2M)
+Current (total cpu=0:01:22, real=0:05:04, peak res=836.2M, current mem=836.2M)
+Total number of combinational cells: 290
+Total number of sequential cells: 79
+Total number of tristate cells: 13
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF1 BUF12CK BUF1S BUF1CK BUF2CK BUF2 BUF3 BUF4 BUF3CK BUF4CK BUF6CK BUF6 BUF8 BUF8CK
+Total number of usable buffers: 14
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV1 INV12 INV12CK INV1CK INV1S INV2 INV3 INV2CK INV4 INV3CK INV4CK INV6 INV6CK INV8 INV8CK
+Total number of usable inverters: 15
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DELA DELC DELB
+Total number of identified usable delay cells: 3
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPLF-40             3  Macro '%s' references a site '%s' that h...
+WARNING   IMPLF-58           382  MACRO '%s' has been found in the databas...
+WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-119            6  LAYER '%s' has been found in the databas...
+WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+WARNING   IMPVL-159          770  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   IMPCTE-290           8  Could not locate cell %s in any library ...
+WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+WARNING   TECHLIB-302          3  No function defined for cell '%s'. The c...
+*** Message Summary: 1180 warning(s), 3 error(s)
+
+<CMD> zoomBox -2160.80200 -938.26900 4020.79000 4595.57500
+<CMD> zoomBox 79.15900 32.63500 3305.98900 2921.33700
+<CMD> zoomBox -352.52600 -154.47800 3443.74500 3243.99500
+<CMD> zoomBox -659.32500 -631.14300 3806.87700 3367.06100
+<CMD> saveIoFile -byOrder -temp ../pr/top.io
+** Writing IO pins constraint template file, all existing constraints are ignored.
+Dumping FTerm of cell top to file
+<CMD> loadIoFile ../pr/top.io
+Reading IO assignment file "../pr/top.io" ...
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Thu Dec 22 22:22:41 2022
+  Total CPU time:     0:02:46
+  Total real time:    0:12:22
+  Peak memory (main): 887.23MB
+
+
+*** Memory Usage v#1 (Current mem = 1162.172M, initial mem = 268.254M) ***
+*** Message Summary: 1181 warning(s), 3 error(s)
+
+--- Ending "Innovus" (totcpu=0:02:46, real=0:12:19, mem=1162.2M) ---

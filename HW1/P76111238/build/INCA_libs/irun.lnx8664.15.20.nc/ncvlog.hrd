@@ -1,0 +1,18 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/charlie/P76111238/./syn
+-INCDIR
+/home/charlie/P76111238/./include
+-INCDIR
+/home/charlie/P76111238/./sim
+-DEFINE
+SYN
+-DEFINE
+prog3
+-DEFINE
+CYCLE=20.0
+-DEFINE
+MAX=100000

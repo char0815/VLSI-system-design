@@ -1,0 +1,15 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/charlie/VSD/HW4_2/./sim/top_tb_WDT.sv
++incdir+/home/charlie/VSD/HW4_2/./src+/home/charlie/VSD/HW4_2/./src/AXI+/home/charlie/VSD/HW4_2/./include+/home/charlie/VSD/HW4_2/./sim
++define+prog4+FSDB
+-define
+CYCLE=12.5
+-define
+CYCLE2=100
+-define
+MAX=6000000
++access+r
++prog_path=/home/charlie/VSD/HW4_2/./sim/prog4

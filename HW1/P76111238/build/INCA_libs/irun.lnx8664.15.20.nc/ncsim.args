@@ -1,0 +1,26 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++prog_path=/home/charlie/P76111238/./sim/prog3
++incdir+/home/charlie/P76111238/./syn+/home/charlie/P76111238/./include+/home/charlie/P76111238/./sim
++define+SYN+prog3
++access+r
++nc64bit
+-MESSAGES
++EMGRLOG
+irun.log
+-XLSTIME
+1663554558
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-XLNAME
+irun
+-XLVERSION
+"TOOL:	irun(64)	15.20-s084"

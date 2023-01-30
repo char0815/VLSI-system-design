@@ -1,0 +1,91 @@
+Warning: Design 'top' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: T-2022.03
+Date   : Sat Nov 26 16:15:08 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: DRAM_valid (input port clocked by clk)
+  Endpoint: DM1/i_SRAM (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_SD_inter_RD__
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  SRAM_wrapper_I_S_AW_inter_WA__I_S_W_inter_WD__I_S_B_inter_WR__I_S_AR_inter_RA__I_S_R_inter_RD___0
+                     enG500K               fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                   10.00      11.00 r
+  DRAM_valid (in)                                         0.15      11.15 r
+  DRAM_wrapper/DRAM_valid (DRAM_wrapper_I_S4AW_inter_WA__I_S4W_inter_WD__I_S4B_inter_WR__I_S4AR_inter_RA__I_S4R_inter_RD__)
+                                                          0.00      11.15 r
+  DRAM_wrapper/U10/O (AN2T)                               0.44      11.59 r
+  DRAM_wrapper/S4R.RVALID (DRAM_wrapper_I_S4AW_inter_WA__I_S4W_inter_WD__I_S4B_inter_WR__I_S4AR_inter_RA__I_S4R_inter_RD__)
+                                                          0.00      11.59 r
+  AXI/RD_S3.RVALID (AXI_I_RA_M0_inter_RA__I_RD_M0_inter_RD__I_WA_M1_inter_WA__I_WD_M1_inter_WD__I_WR_M1_inter_WR__I_RA_M1_inter_RA__I_RD_M1_inter_RD__I_WA_S0_inter_WA__I_WD_S0_inter_WD__I_WR_S0_inter_WR__I_RA_S0_inter_RA__I_RD_S0_inter_RD__I_WA_S1_inter_WA__I_WD_S1_inter_WD__I_WR_S1_inter_WR__I_RA_S1_inter_RA__I_RD_S1_inter_RD__I_WA_S2_inter_WA__I_WD_S2_inter_WD__I_WR_S2_inter_WR__I_RA_S2_inter_RA__I_RD_S2_inter_RD__I_WA_S3_inter_WA__I_WD_S3_inter_WD__I_WR_S3_inter_WR__I_RA_S3_inter_RA__I_RD_S3_inter_RD__)
+                                                          0.00      11.59 r
+  AXI/RD/S3.RVALID (ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_SD_inter_RD__)
+                                                          0.00      11.59 r
+  AXI/RD/U8/O (INV6)                                      0.06      11.65 f
+  AXI/RD/U149/O (OA12P)                                   0.25      11.90 f
+  AXI/RD/U281/O (NR2P)                                    0.10      12.00 r
+  AXI/RD/U11/O (BUF1CK)                                   0.19      12.19 r
+  AXI/RD/U17/O (INV1S)                                    0.30      12.49 f
+  AXI/RD/U264/O (MAOI1HP)                                 0.30      12.79 f
+  AXI/RD/U26/O (ND3HT)                                    0.15      12.93 r
+  AXI/RD/U20/O (INV1)                                     0.08      13.01 f
+  AXI/RD/U25/O (OR2)                                      0.24      13.25 f
+  AXI/RD/U16/O (AOI22H)                                   0.20      13.45 r
+  AXI/RD/U4/O (INV4CK)                                    0.09      13.54 f
+  AXI/RD/U5/O (INV2)                                      0.06      13.60 r
+  AXI/RD/U15/O (AN3B2T)                                   0.41      14.01 f
+  AXI/RD/S2.RREADY (ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_SD_inter_RD__)
+                                                          0.00      14.01 f
+  AXI/RD_S2.RREADY (AXI_I_RA_M0_inter_RA__I_RD_M0_inter_RD__I_WA_M1_inter_WA__I_WD_M1_inter_WD__I_WR_M1_inter_WR__I_RA_M1_inter_RA__I_RD_M1_inter_RD__I_WA_S0_inter_WA__I_WD_S0_inter_WD__I_WR_S0_inter_WR__I_RA_S0_inter_RA__I_RD_S0_inter_RD__I_WA_S1_inter_WA__I_WD_S1_inter_WD__I_WR_S1_inter_WR__I_RA_S1_inter_RA__I_RD_S1_inter_RD__I_WA_S2_inter_WA__I_WD_S2_inter_WD__I_WR_S2_inter_WR__I_RA_S2_inter_RA__I_RD_S2_inter_RD__I_WA_S3_inter_WA__I_WD_S3_inter_WD__I_WR_S3_inter_WR__I_RA_S3_inter_RA__I_RD_S3_inter_RD__)
+                                                          0.00      14.01 f
+  DM1/S_R.RREADY (SRAM_wrapper_I_S_AW_inter_WA__I_S_W_inter_WD__I_S_B_inter_WR__I_S_AR_inter_RA__I_S_R_inter_RD___0)
+                                                          0.00      14.01 f
+  DM1/U35/O (ND2S)                                        0.56      14.57 r
+  DM1/U31/O (ND3)                                         0.91      15.48 f
+  DM1/U17/O (AN2)                                         0.82      16.30 f
+  DM1/U67/O (BUF1CK)                                      0.51      16.80 f
+  DM1/U18/O (INV2)                                        0.87      17.67 r
+  DM1/U73/O (AOI12HS)                                     0.33      18.00 f
+  DM1/U15/O (BUF4)                                        0.46      18.46 f
+  DM1/U37/O (AN2)                                         0.38      18.84 f
+  DM1/U29/O (NR2)                                         0.56      19.40 r
+  DM1/U28/O (ND2)                                         0.49      19.89 f
+  DM1/i_SRAM/A0 (SRAM)                                    0.00      19.89 f
+  data arrival time                                                 19.89
+
+  clock clk (rise edge)                                  20.00      20.00
+  clock network delay (ideal)                             1.00      21.00
+  clock uncertainty                                      -0.10      20.90
+  DM1/i_SRAM/CK (SRAM)                                    0.00      20.90 r
+  library setup time                                     -1.00      19.90
+  data required time                                                19.90
+  --------------------------------------------------------------------------
+  data required time                                                19.90
+  data arrival time                                                -19.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

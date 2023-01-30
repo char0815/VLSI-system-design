@@ -1,0 +1,26 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++prog_path=/home/charlie/VSD/HW4_4/./sim/prog0
++incdir+/home/charlie/VSD/HW4_4/./syn+/home/charlie/VSD/HW4_4/./include+/home/charlie/VSD/HW4_4/./sim
++define+SYN+prog0+FSDB
++access+r
++nc64bit
+-SDF_FILE
+/home/charlie/VSD/HW4_4/./syn/top_syn.sdf
+-ACCESS
++r
+-SDFSTATS
+sdfstats.log
+-MESSAGES
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-WORK
+worklib
+-HASXLMODE

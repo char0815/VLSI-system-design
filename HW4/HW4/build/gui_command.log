@@ -1,0 +1,37 @@
+source ../script/Spyglass_CDC.tcl
+
+# Started at 22:06:24, Completed at 22:06:30 (Elapsed time = 00:00:06.890)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:06:42, Completed at 22:06:46 (Elapsed time = 00:00:03.269)
+
+run_goal
+# Started at 22:06:46, Completed at 22:07:08 (Elapsed time = 00:00:23.450)
+
+current_goal cdc/clock_reset_integrity -alltop
+# Started at 22:07:08, Completed at 22:07:12 (Elapsed time = 00:00:03.719)
+
+run_goal
+# Started at 22:07:12, Completed at 22:07:20 (Elapsed time = 00:00:08.869)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:07:20, Completed at 22:07:24 (Elapsed time = 00:00:03.600)
+
+run_goal
+# Started at 22:07:24, Completed at 22:07:34 (Elapsed time = 00:00:10.819)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 22:07:34, Completed at 22:07:37 (Elapsed time = 00:00:03.590)
+
+run_goal
+# Started at 22:07:38, Completed at 22:08:28 (Elapsed time = 00:00:51.260)
+
+current_goal cdc/cdc_abstract -alltop
+# Started at 22:08:28, Completed at 22:08:31 (Elapsed time = 00:00:03.750)
+
+run_goal
+# Started at 22:08:32, Completed at 22:08:41 (Elapsed time = 00:00:10.699)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:08:42, Completed at 22:08:45 (Elapsed time = 00:00:03.680)
+

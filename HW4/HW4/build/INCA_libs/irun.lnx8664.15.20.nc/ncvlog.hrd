@@ -1,0 +1,22 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/charlie/VSD/HW4_4/./syn
+-INCDIR
+/home/charlie/VSD/HW4_4/./include
+-INCDIR
+/home/charlie/VSD/HW4_4/./sim
+-DEFINE
+SYN
+-DEFINE
+prog0
+-DEFINE
+FSDB
+-DEFINE
+CYCLE=12.5
+-DEFINE
+CYCLE2=100
+-DEFINE
+MAX=6000000

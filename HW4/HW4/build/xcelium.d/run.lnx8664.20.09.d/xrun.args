@@ -1,0 +1,18 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./sim/top_tb.sv
+-sdf_file
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./pr/top_pr.sdf
++incdir+/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./pr+/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./include+/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./sim
++define+PR+prog1
+-define
+CYCLE=12.5
+-define
+CYCLE2=100
+-define
+MAX=6000000
++access+r
++prog_path=/home/user2/Vsd22/Vsd22113/Desktop/HW4_4/./sim/prog1
+-maxdelays

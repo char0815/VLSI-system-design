@@ -1,0 +1,3 @@
+createRegion DM1 35.34 636.589 3126.66 3124.8
+createRegion IM1 35.34 636.589 3126.66 2523.49
+createRegion CPU_wrapper 3126.66 2523.49 2353.83 3124.8
