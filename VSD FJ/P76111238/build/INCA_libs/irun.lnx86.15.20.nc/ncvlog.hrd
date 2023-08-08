@@ -1,0 +1,18 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/charlie/VSD/VSD_FJ/P76111238/./src
+-INCDIR
+/home/charlie/VSD/VSD_FJ/P76111238/./src/AXI
+-INCDIR
+/home/charlie/VSD/VSD_FJ/P76111238/./include
+-INCDIR
+/home/charlie/VSD/VSD_FJ/P76111238/./sim
+-DEFINE
+prog1
+-DEFINE
+CYCLE=20.0
+-DEFINE
+MAX=60000000

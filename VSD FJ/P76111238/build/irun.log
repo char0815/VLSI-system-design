@@ -1,0 +1,487 @@
+irun: 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-s084: Started on Jan 02, 2023 at 15:32:01 CST
+irun
+	/home/charlie/VSD/VSD_FJ/P76111238/./sim/top_tb.sv
+	+incdir+/home/charlie/VSD/VSD_FJ/P76111238/./src+/home/charlie/VSD/VSD_FJ/P76111238/./src/AXI+/home/charlie/VSD/VSD_FJ/P76111238/./include+/home/charlie/VSD/VSD_FJ/P76111238/./sim
+	+define+prog1
+	-define CYCLE=20.0
+	-define MAX=60000000
+	+access+r
+	+prog_path=/home/charlie/VSD/VSD_FJ/P76111238/./sim/prog1
+
+   User defined plus("+") options:
+	+prog_path=/home/charlie/VSD/VSD_FJ/P76111238/./sim/prog1
+
+file: /home/charlie/VSD/VSD_FJ/P76111238/./sim/top_tb.sv
+`define CYCLE 8.0 // Cycle time
+                               |
+ncvlog: *W,MACNDF (/home/charlie/VSD/VSD_FJ/P76111238/./sim/top_tb.sv,2|31): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define MAX 300000 // Max cycle number
+                                      |
+ncvlog: *W,MACNDF (/home/charlie/VSD/VSD_FJ/P76111238/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+    $value$plusargs("prog_path=%s", prog_path);
+                  |
+ncvlog: *W,NOSYST (/home/charlie/VSD/VSD_FJ/P76111238/./sim/top_tb.sv,132|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (/home/charlie/VSD/VSD_FJ/P76111238/./sim/top_tb.sv,148|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.top_tb:sv
+		errors: 0, warnings: 2
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		$unit_0x0c8b2630
+		top_tb
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    $readmemh({prog_path, "/rom0.hex"}, i_ROM.Memory_byte0);
+                                                         |
+ncelab: *W,MEMODR (../sim/top_tb.sv,135|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom1.hex"}, i_ROM.Memory_byte1);
+                                                         |
+ncelab: *W,MEMODR (../sim/top_tb.sv,136|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom2.hex"}, i_ROM.Memory_byte2);
+                                                         |
+ncelab: *W,MEMODR (../sim/top_tb.sv,137|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom3.hex"}, i_ROM.Memory_byte3);
+                                                         |
+ncelab: *W,MEMODR (../sim/top_tb.sv,138|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram0.hex"}, i_DRAM.Memory_byte0);
+                                                           |
+ncelab: *W,MEMODR (../sim/top_tb.sv,139|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram1.hex"}, i_DRAM.Memory_byte1);
+                                                           |
+ncelab: *W,MEMODR (../sim/top_tb.sv,140|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram2.hex"}, i_DRAM.Memory_byte2);
+                                                           |
+ncelab: *W,MEMODR (../sim/top_tb.sv,141|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram3.hex"}, i_DRAM.Memory_byte3);
+                                                           |
+ncelab: *W,MEMODR (../sim/top_tb.sv,142|59): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.AR_ch:sv <0x5a121ac5>
+			streams:  29, words: 13447
+		worklib.AW_ch:sv <0x18e2772d>
+			streams:  27, words: 12207
+		worklib.AXI:sv <0x6c627521>
+			streams: 339, words: 70456
+		worklib.Arbiter:sv <0x6e32a800>
+			streams:   3, words:  4217
+		worklib.B_ch:sv <0x45bc9e1a>
+			streams:   9, words:  5636
+		worklib.Bias_SRAM_2k:sv <0x3b3d7730>
+			streams:   7, words:  1603
+		worklib.Bias_wrapper:sv <0x1814612e>
+			streams:   5, words:  9744
+		worklib.CPU:sv <0x52f782b3>
+			streams:  80, words: 18678
+		worklib.CPU_wrapper:sv <0x1a73bd88>
+			streams:  64, words: 13071
+		worklib.CSR:sv <0x47ce648b>
+			streams:  31, words: 17404
+		worklib.ConvAcc:sv <0x6bf8b1ab>
+			streams:  10, words:  5019
+		worklib.ConvAcc_wrapper:sv <0x219b5ba0>
+			streams:   1, words:   366
+		worklib.Conv_1x1:sv <0x075274c9>
+			streams: 100, words: 47592
+		worklib.Conv_3x3:sv <0x306790a8>
+			streams: 358, words: 165330
+		worklib.Conv_bus_switcher:sv <0x58e6d351>
+			streams:  12, words: 43048
+		worklib.DMA:sv <0x2a4e0f1e>
+			streams:  14, words:  3113
+		worklib.DMA_master:sv <0x56c80d1c>
+			streams:  43, words: 16665
+		worklib.DMA_slave:sv <0x2f7d6cf9>
+			streams:  22, words: 14446
+		worklib.DRAM:sv <0x62e26601>
+			streams:  46, words: 32775
+		worklib.DRAM_wrapper:sv <0x393185bb>
+			streams:  51, words: 25437
+		worklib.Decoder:sv <0x26f4ba65>
+			streams:   3, words:  3587
+		worklib.DefaultSlave:sv <0x54b149aa>
+			streams:  19, words:  8897
+		worklib.EPU_wrapper:sv <0x151f081a>
+			streams:  64, words: 32312
+		worklib.EXE_S:sv <0x5e0bc028>
+			streams:  29, words: 20862
+		worklib.FIFO:sv <0x4ad183b6>
+			streams:  11, words:  4999
+		worklib.Forward:sv <0x1b92ce9b>
+			streams:   6, words:  2120
+		worklib.Hazard:sv <0x06eef629>
+			streams:   8, words:  1851
+		worklib.ID_S:sv <0x4f56c05b>
+			streams:  20, words: 35366
+		worklib.IF_S:sv <0x6d317e42>
+			streams:  14, words:  4518
+		worklib.InOut_SRAM_384k:sv <0x65c59a82>
+			streams:  19, words:  7031
+		worklib.InOut_switcher:sv <0x14434333>
+			streams:   1, words:  5398
+		worklib.Input_wrapper:sv <0x16865a84>
+			streams:   5, words:  9744
+		worklib.L1C_data:sv <0x70876c4a>
+			streams:  52, words: 24301
+		worklib.L1C_inst:sv <0x15e15f51>
+			streams:  29, words: 14270
+		worklib.MEM_S:sv <0x1ab81b25>
+			streams:  18, words:  8596
+		worklib.Master:sv <0x0d1ea097>
+			streams:  21, words: 10013
+		worklib.Master:sv <0x1bff23f6>
+			streams:  21, words: 11458
+		worklib.Max_pool:sv <0x0ed2cc93>
+			streams:  31, words: 21486
+		worklib.Output_wrapper:sv <0x54f6fabc>
+			streams:   5, words:  9744
+		worklib.PLIC:sv <0x0279b543>
+			streams:  11, words:  3015
+		worklib.Param_SRAM_16B:sv <0x56873e0c>
+			streams:  11, words:  3283
+		worklib.Param_wrapper:sv <0x24c113f8>
+			streams:   5, words:  9784
+		worklib.ROM:v <0x371d783d>
+			streams:   3, words:  1466
+		worklib.ROM_wrapper:sv <0x45644369>
+			streams:  20, words:  8946
+		worklib.R_ch:sv <0x66a19dcf>
+			streams:  21, words: 17817
+		worklib.RegFile:sv <0x1d779c20>
+			streams:   5, words:  7645
+		worklib.SCtrl_wrapper:sv <0x7b78671d>
+			streams:  35, words: 14371
+		worklib.SRAM:sv <0x39b48f81>
+			streams:  61, words: 16764
+		worklib.SRAM:sv <0x497731a5>
+			streams:  61, words: 16764
+		worklib.SRAM_wrapper:sv <0x2b0c4b6d>
+			streams:  59, words: 33914
+		worklib.SUMA180_16384X18X1BM4:sv <0x1a52250d>
+			streams:  37, words:  8697
+		worklib.SUMA180_32768X16X1BM8:sv <0x2efd57d9>
+			streams:  36, words:  8166
+		worklib.SUMA180_384X32X1BM4:sv <0x0dda1852>
+			streams:  46, words: 11471
+		worklib.WB_S:sv <0x2c0508b5>
+			streams:   3, words:   498
+		worklib.W_ch:sv <0x585cbc01>
+			streams:  24, words: 11645
+		worklib.Weight_SRAM_180k:sv <0x3296548c>
+			streams:  19, words:  7536
+		worklib.Weight_wrapper:sv <0x0c8d5f61>
+			streams:   5, words:  9744
+		worklib.data_array:sv <0x0b64b94e>
+			streams:  58, words: 52885
+		worklib.sensor_ctrl:sv <0x7c377e31>
+			streams:   6, words:  9993
+		worklib.tag_array:sv <0x1ecc528a>
+			streams:  34, words:  8824
+		worklib.top:sv <0x3a5d6a23>
+			streams:  17, words:  5438
+		worklib.top_tb:sv <0x51db8bb6>
+			streams:  30, words: 33908
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                106      65
+		Interfaces:              43       9
+		Registers:             1829    1212
+		Scalar wires:          2792       -
+		Expanded wires:        1543      68
+		Vectored wires:         818       -
+		Named events:             5       5
+		Always blocks:          353     295
+		Initial blocks:           7       7
+		Cont. assignments:     1192    1140
+		Pseudo assignments:     773     651
+		Assertions:               5       5
+		Compilation units:        1       1
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.top_tb:sv
+Loading snapshot worklib.top_tb:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+
+Done
+
+DRAM[1048576] = 84cfd7e3, pass
+DRAM[1048577] = 8b9bd643, pass
+DRAM[1048578] = 8d4432af, pass
+DRAM[1048579] = 8d8781ff, pass
+DRAM[1048580] = 904eb413, pass
+DRAM[1048581] = 90a69649, pass
+DRAM[1048582] = 9c77bd3b, pass
+DRAM[1048583] = a0f84d2b, pass
+DRAM[1048584] = a3bc2319, pass
+DRAM[1048585] = a89385ff, pass
+DRAM[1048586] = a8b036ea, pass
+DRAM[1048587] = ad329c31, pass
+DRAM[1048588] = b0cdef2b, pass
+DRAM[1048589] = b401edca, pass
+DRAM[1048590] = b4e22910, pass
+DRAM[1048591] = b62b4874, pass
+DRAM[1048592] = c0cbf4e5, pass
+DRAM[1048593] = cd8054e0, pass
+DRAM[1048594] = cf18dffe, pass
+DRAM[1048595] = db533169, pass
+DRAM[1048596] = dfe12435, pass
+DRAM[1048597] = e485d720, pass
+DRAM[1048598] = e826e917, pass
+DRAM[1048599] = e9f68db6, pass
+DRAM[1048600] = eaff6a17, pass
+DRAM[1048601] = f554b7da, pass
+DRAM[1048602] = f8dc1bf7, pass
+DRAM[1048603] = fc54d5d2, pass
+DRAM[1048604] = fdbafcf6, pass
+DRAM[1048605] = fe72d130, pass
+DRAM[1048606] = ff3a38ec, pass
+DRAM[1048607] = 0560a5d8, pass
+DRAM[1048608] = 0ae24ad2, pass
+DRAM[1048609] = 147c676d, pass
+DRAM[1048610] = 14d207fa, pass
+DRAM[1048611] = 14ded581, pass
+DRAM[1048612] = 1d106e7b, pass
+DRAM[1048613] = 22628dec, pass
+DRAM[1048614] = 236bd867, pass
+DRAM[1048615] = 273916b0, pass
+DRAM[1048616] = 28c1c11b, pass
+DRAM[1048617] = 31a75595, pass
+DRAM[1048618] = 38b1ca95, pass
+DRAM[1048619] = 3a01e49f, pass
+DRAM[1048620] = 3d17c60f, pass
+DRAM[1048621] = 3d6f6966, pass
+DRAM[1048622] = 4135559b, pass
+DRAM[1048623] = 43f676d6, pass
+DRAM[1048624] = 4739fe4d, pass
+DRAM[1048625] = 4b3dc965, pass
+DRAM[1048626] = 4cd2f070, pass
+DRAM[1048627] = 509cf84e, pass
+DRAM[1048628] = 5222ff27, pass
+DRAM[1048629] = 5e588a3f, pass
+DRAM[1048630] = 61c7b092, pass
+DRAM[1048631] = 6364a097, pass
+DRAM[1048632] = 66ce6d1d, pass
+DRAM[1048633] = 71e11b33, pass
+DRAM[1048634] = 72284d17, pass
+DRAM[1048635] = 74eacf4b, pass
+DRAM[1048636] = 7531d41d, pass
+DRAM[1048637] = 79f4ae12, pass
+DRAM[1048638] = 7b64209a, pass
+DRAM[1048639] = 7f4d5d5c, pass
+DRAM[1048640] = 8032656c, pass
+DRAM[1048641] = 891abc80, pass
+DRAM[1048642] = 8be71d11, pass
+DRAM[1048643] = 8e66d057, pass
+DRAM[1048644] = 9333144e, pass
+DRAM[1048645] = 9843707f, pass
+DRAM[1048646] = acb6eaed, pass
+DRAM[1048647] = aed222d8, pass
+DRAM[1048648] = b2ec68ab, pass
+DRAM[1048649] = b7a09f38, pass
+DRAM[1048650] = bb34d2ec, pass
+DRAM[1048651] = bbb26f77, pass
+DRAM[1048652] = c8f18c28, pass
+DRAM[1048653] = dc70c413, pass
+DRAM[1048654] = e86442bd, pass
+DRAM[1048655] = ea15b080, pass
+DRAM[1048656] = eee8f3dc, pass
+DRAM[1048657] = efa60830, pass
+DRAM[1048658] = f091959c, pass
+DRAM[1048659] = f34387e4, pass
+DRAM[1048660] = f3cd22f0, pass
+DRAM[1048661] = f6870ec2, pass
+DRAM[1048662] = f8c83443, pass
+DRAM[1048663] = f9fd3a83, pass
+DRAM[1048664] = fd6c343a, pass
+DRAM[1048665] = ff5106c0, pass
+DRAM[1048666] = 00b9980c, pass
+DRAM[1048667] = 013589ef, pass
+DRAM[1048668] = 013cdd93, pass
+DRAM[1048669] = 03dee625, pass
+DRAM[1048670] = 062c36ea, pass
+DRAM[1048671] = 06bc6a42, pass
+DRAM[1048672] = 08be689a, pass
+DRAM[1048673] = 18680145, pass
+DRAM[1048674] = 1b9fd50f, pass
+DRAM[1048675] = 1ce6433e, pass
+DRAM[1048676] = 1f971f5e, pass
+DRAM[1048677] = 2225f334, pass
+DRAM[1048678] = 24c45a9f, pass
+DRAM[1048679] = 267fc252, pass
+DRAM[1048680] = 2bdfd84b, pass
+DRAM[1048681] = 3421d3c0, pass
+DRAM[1048682] = 3a41d3ef, pass
+DRAM[1048683] = 3b9c9ad8, pass
+DRAM[1048684] = 45874faf, pass
+DRAM[1048685] = 4e5dd339, pass
+DRAM[1048686] = 5236e160, pass
+DRAM[1048687] = 55a02c75, pass
+DRAM[1048688] = 595420ca, pass
+DRAM[1048689] = 5d736afa, pass
+DRAM[1048690] = 5eb01c63, pass
+DRAM[1048691] = 5f9f234b, pass
+DRAM[1048692] = 604461f0, pass
+DRAM[1048693] = 604fe11b, pass
+DRAM[1048694] = 664c4fdd, pass
+DRAM[1048695] = 67941de8, pass
+DRAM[1048696] = 68ee35bc, pass
+DRAM[1048697] = 6e15e00d, pass
+DRAM[1048698] = 70e3f9e8, pass
+DRAM[1048699] = 725c023f, pass
+DRAM[1048700] = 73f47ced, pass
+DRAM[1048701] = 7cc52a63, pass
+DRAM[1048702] = 7e13f218, pass
+DRAM[1048703] = 7fc9ce8e, pass
+DRAM[1048704] = 80e95979, pass
+DRAM[1048705] = 87417216, pass
+DRAM[1048706] = 92822591, pass
+DRAM[1048707] = 94277f1a, pass
+DRAM[1048708] = 98d172bb, pass
+DRAM[1048709] = 9b9ac36b, pass
+DRAM[1048710] = a1ac1b91, pass
+DRAM[1048711] = a2d0acd6, pass
+DRAM[1048712] = bb787b20, pass
+DRAM[1048713] = bf82ca37, pass
+DRAM[1048714] = bfc806e0, pass
+DRAM[1048715] = c601bc6e, pass
+DRAM[1048716] = cb4cd868, pass
+DRAM[1048717] = d247906d, pass
+DRAM[1048718] = d7e7c51c, pass
+DRAM[1048719] = da0a7afb, pass
+DRAM[1048720] = dab8a013, pass
+DRAM[1048721] = dc5ac4a3, pass
+DRAM[1048722] = e08969bf, pass
+DRAM[1048723] = e4a534cf, pass
+DRAM[1048724] = e7fe5933, pass
+DRAM[1048725] = ebaa98b8, pass
+DRAM[1048726] = ee0e03fd, pass
+DRAM[1048727] = f2267081, pass
+DRAM[1048728] = f4e33a49, pass
+DRAM[1048729] = f5b9586c, pass
+DRAM[1048730] = fb3bf8dc, pass
+DRAM[1048731] = fb8b282b, pass
+DRAM[1048732] = 031ca8d3, pass
+DRAM[1048733] = 09ce29c0, pass
+DRAM[1048734] = 10863923, pass
+DRAM[1048735] = 13e35a1d, pass
+DRAM[1048736] = 1545c318, pass
+DRAM[1048737] = 174ba317, pass
+DRAM[1048738] = 19f81d63, pass
+DRAM[1048739] = 1dc22656, pass
+DRAM[1048740] = 25dff4a6, pass
+DRAM[1048741] = 2788a464, pass
+DRAM[1048742] = 28ac0992, pass
+DRAM[1048743] = 2ca276d6, pass
+DRAM[1048744] = 38983aeb, pass
+DRAM[1048745] = 39fda8a1, pass
+DRAM[1048746] = 3c0ab296, pass
+DRAM[1048747] = 3d21f7a8, pass
+DRAM[1048748] = 3e67228a, pass
+DRAM[1048749] = 3eeeb430, pass
+DRAM[1048750] = 41638b23, pass
+DRAM[1048751] = 45860aba, pass
+DRAM[1048752] = 4eaf9ebd, pass
+DRAM[1048753] = 5508e8f2, pass
+DRAM[1048754] = 5529c623, pass
+DRAM[1048755] = 56037c9b, pass
+DRAM[1048756] = 5a331837, pass
+DRAM[1048757] = 5ab7ad92, pass
+DRAM[1048758] = 5bed32b3, pass
+DRAM[1048759] = 5c7ed276, pass
+DRAM[1048760] = 65889bd8, pass
+DRAM[1048761] = 67a7ad4d, pass
+DRAM[1048762] = 6848065b, pass
+DRAM[1048763] = 686618a5, pass
+DRAM[1048764] = 79d8c2cd, pass
+DRAM[1048765] = 7ae430df, pass
+DRAM[1048766] = 7ea5252b, pass
+DRAM[1048767] = 7f228d5a, pass
+DRAM[1048768] = 80fd6bc9, pass
+DRAM[1048769] = 833cdd93, pass
+DRAM[1048770] = 85294072, pass
+DRAM[1048771] = 89f1ad4a, pass
+DRAM[1048772] = 8a894bf4, pass
+DRAM[1048773] = 8de8071e, pass
+DRAM[1048774] = 9efa3db6, pass
+DRAM[1048775] = a6083f4e, pass
+DRAM[1048776] = aa6fbd92, pass
+DRAM[1048777] = af1d3890, pass
+DRAM[1048778] = b0fcf189, pass
+DRAM[1048779] = b5099a7b, pass
+DRAM[1048780] = b7b9f425, pass
+DRAM[1048781] = bb84e834, pass
+DRAM[1048782] = be4be621, pass
+DRAM[1048783] = c2166a1f, pass
+DRAM[1048784] = c3b201b1, pass
+DRAM[1048785] = cc170cd0, pass
+DRAM[1048786] = cff54693, pass
+DRAM[1048787] = d3d5d222, pass
+DRAM[1048788] = dabfe6a4, pass
+DRAM[1048789] = db637763, pass
+DRAM[1048790] = dedf57a7, pass
+DRAM[1048791] = e3546432, pass
+DRAM[1048792] = ea954f19, pass
+DRAM[1048793] = ec785cbc, pass
+DRAM[1048794] = ecf05085, pass
+DRAM[1048795] = f11a2c67, pass
+DRAM[1048796] = f8936ef8, pass
+DRAM[1048797] = fb8afb51, pass
+DRAM[1048798] = 038e4fbf, pass
+DRAM[1048799] = 03d355a3, pass
+DRAM[1048800] = 087061c2, pass
+DRAM[1048801] = 0d42cabf, pass
+DRAM[1048802] = 1bc906d5, pass
+DRAM[1048803] = 2445aee1, pass
+DRAM[1048804] = 262f246a, pass
+DRAM[1048805] = 26d130b6, pass
+DRAM[1048806] = 323d629f, pass
+DRAM[1048807] = 397d3502, pass
+DRAM[1048808] = 3ad26132, pass
+DRAM[1048809] = 3ae61eb6, pass
+DRAM[1048810] = 3c8d9306, pass
+DRAM[1048811] = 421935ca, pass
+DRAM[1048812] = 4aea4f8f, pass
+DRAM[1048813] = 4f0f1386, pass
+DRAM[1048814] = 52918fba, pass
+DRAM[1048815] = 52cd5bdf, pass
+DRAM[1048816] = 5521a149, pass
+DRAM[1048817] = 553339e7, pass
+DRAM[1048818] = 5b1df301, pass
+DRAM[1048819] = 5bf5dfc0, pass
+DRAM[1048820] = 5c26ae10, pass
+DRAM[1048821] = 5e49ae0b, pass
+DRAM[1048822] = 600a5017, pass
+DRAM[1048823] = 605d2cca, pass
+DRAM[1048824] = 60d8d33a, pass
+DRAM[1048825] = 625504dd, pass
+DRAM[1048826] = 692036ca, pass
+DRAM[1048827] = 6e61b9ca, pass
+DRAM[1048828] = 6eaec742, pass
+DRAM[1048829] = 6f0ae39e, pass
+DRAM[1048830] = 6fbb1df9, pass
+DRAM[1048831] = 7b6f3aa3, pass
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  Congratulations !!    **      / O.O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 37151280 NS + 0
+../sim/top_tb.sv:200     $finish;
+ncsim> exit
+TOOL:	irun	15.20-s084: Exiting on Jan 02, 2023 at 15:32:09 CST  (total: 00:00:08)
